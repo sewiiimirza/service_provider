@@ -1,7 +1,7 @@
 
-class RouteName {
+class AppRoutes {
 
   static const String SplashScreen = '/';
-  static const String LoginScreen = '/loginScreen';
+ // static const String LoginScreen = '/loginScreen';
 
 }

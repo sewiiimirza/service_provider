@@ -1,17 +1,12 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:e_services/pages/Login/view.dart';
+import 'package:e_services/pages/SplashScreen/controller.dart';
 import 'package:e_services/res/colors/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+class SplashScreen extends GetView<SplashController>{
+  const SplashScreen({Key? key}): super(key: key);
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,8 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
 
-}
-
+}//view depends on controller
 
 
 

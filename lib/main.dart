@@ -1,5 +1,6 @@
 import 'package:e_services/pages/Login/view.dart';
 import 'package:e_services/pages/SplashScreen/view.dart';
+import 'package:e_services/pages/SplashScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:e_services/utils/routes/routes.dart';
@@ -28,8 +29,9 @@ class MyApp extends StatelessWidget {
       ),
        home: const SplashScreen(),
        // getPages:AppRoutes.appRoutes(),
-
-    ) ;
+        initialRoute: AppRoutes.SplashScreen,
+        getPages:AppPages.routes,
+      ) ;
 
   }
 }
