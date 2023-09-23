@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-       home: const SplashScreen(),
+       home: const SplashScreenView(),
        // getPages:AppRoutes.appRoutes(),
         initialRoute: AppRoutes.SplashScreen,
         getPages:AppPages.routes,

@@ -1,3 +1,5 @@
+import 'package:e_services/pages/OnboardingScreens/view.dart';
+import 'package:e_services/pages/SignUp_Login/view.dart';
 import 'package:e_services/pages/SplashScreen/states.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +10,7 @@ class SplashController extends GetxController{
   @override
 void onReady(){
     super.onReady();
-    print('WelcomeController');
+   Future.delayed(Duration(seconds: 3),()=>Get.offAll(OnboardingView()));
   }//used for navigation and routing things
 
 }//now controller and state are called from UI
