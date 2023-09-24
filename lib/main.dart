@@ -1,5 +1,5 @@
-import 'package:e_services/pages/Login/view.dart';
-import 'package:e_services/pages/SplashScreen/view.dart';
+
+import 'package:e_services/pages/Onboarding/index.dart';
 import 'package:e_services/pages/SplashScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:e_services/utils/routes/route_name.dart';
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-       home: const SplashScreenView(),
+       home:  SplashScreenView(),
        // getPages:AppRoutes.appRoutes(),
         initialRoute: AppRoutes.SplashScreen,
         getPages:AppPages.routes,

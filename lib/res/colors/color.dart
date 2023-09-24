@@ -4,11 +4,16 @@ import 'package:flutter/material.dart';
 
 class AppColors {
 
-  static const Color secondaryColor =  Color(0xff00B4DB);
+  static const Color secondaryColor =  Color(0xff1c4398);
   static const Color primaryColor =  Color.fromRGBO(131, 110, 199, 1.0);
 
   static const Color primaryTextColor =  Color(0xFF124DEA);
-  static const Color secondaryTextColor =  Color(0xff4ad0ee);
+  static const Color secondaryTextColor =  Color(0xff130d0d);
+  static const Color onboardingPageColor1 =  Color(0xfffddcdf);
+  static const Color onboardingPageColor2=  Color(0xffffdcbd);
+  static const Color onboardingPageColor3=  Color(0xffb48a82);
+  static const Color onboardingPageColor4=  Color(0xffFDB99B);
+
 
   static const Color primaryIconColor =  Color(0xff242424);
 
