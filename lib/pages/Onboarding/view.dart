@@ -11,10 +11,12 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class OnboardingView extends GetView<OnboardingController>{
   OnboardingView({Key? key}): super(key: key);
-  final obcontroller=OnboardingController();
+
+  final obcontroller=Get.put<OnboardingController>(OnboardingController());
   final state=OnboardingState();
   @override
   Widget build(BuildContext context) {
+    //controller.Navigate();
         return Scaffold(
             body:SafeArea(
               child: Stack(
@@ -51,7 +53,7 @@ class OnboardingView extends GetView<OnboardingController>{
                           right: 20,
                           child: TextButton(
                             onPressed: ()=>obcontroller.skip(),
-                            child: Text('skip',style: TextStyle(color: Colors.grey,fontSize:50,fontWeight: FontWeight.bold)),
+                            child: Text('skip',style: TextStyle(color: Colors.cyan,fontSize:16,fontWeight: FontWeight.bold)),
                           ),
                         ),
                         Obx(

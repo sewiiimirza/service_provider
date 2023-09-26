@@ -20,23 +20,23 @@ class OnboardingScreen3 extends StatelessWidget {
    final  size= MediaQuery.of(context).size;
     return
       Container(
-        color: AppColors.onboardingPageColor3,
+      //  color: AppColors.onboardingPageColor3,
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             const  Image(
+             Image(
                 image: AssetImage('assets/images/onboarding3.png',),
-            //  height:size.height*0.4,
+                 height:size.height*0.4,
           ),
 
               Column(
                 children: [
-                  Text('Quick and Easy\n'
-                      'Booking',
+                  Text('Fast Services\n'
+                      'Services will be done quickly ',
                       textAlign: TextAlign.center,
                       style: Theme
                           .of(context)
-                          .textTheme.headlineLarge!.copyWith(color: Colors.black)),
+                          .textTheme.headlineMedium!.copyWith(color: Colors.black)),
                 ],
               ),
               SizedBox(height: 40.0,),

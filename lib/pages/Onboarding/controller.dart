@@ -17,7 +17,6 @@ class OnboardingController extends GetxController{
    controller.animateToPage(page: nextPage);
  }
 
-
  final pages=[
    OnboardingScreen1(image:'assets/images/onboarding1.png',
      title: 'Quick and Easy\n'
@@ -31,10 +30,10 @@ class OnboardingController extends GetxController{
  ];
 
 
-  @override
-  void Navigate(){
-    Future.delayed(Duration(seconds: 3),()=>Get.offAll(SignupLoginView()));
-  }//used for navigation and routing things
+  //@override
+ // void Navigate(){
+ //   Future.delayed(Duration(seconds: 3),()=>Get.offAll(SignupLoginView()));
+ // }//used for navigation and routing things
 
 }//
 // now controller and state are called from UI
