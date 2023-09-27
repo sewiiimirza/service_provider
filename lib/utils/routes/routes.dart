@@ -1,5 +1,6 @@
 
 
+import 'package:e_services/pages/Welcome/view.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -9,9 +10,11 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../pages/Onboarding/bindings.dart';
 import '../../pages/Onboarding/view.dart';
 
+import '../../pages/SignUp_Login/bindings.dart';
 import '../../pages/SignUp_Login/view.dart';
 import '../../pages/SplashScreen/bindings.dart';
 import '../../pages/SplashScreen/view.dart';
+import '../../pages/Welcome/bindings.dart';
 
 
 
@@ -30,10 +33,15 @@ class AppPages {
              page: () =>OnboardingView(),
           binding:OnboardingBinding(),
          ),
+    GetPage(
+      name: AppRoutes.WelcomeScreen,
+      page: () =>Welcome(),
+      binding:WelcomeBinding(),
+    ),
           GetPage(
          name: AppRoutes.Login_Sign_Up,
            page: () =>SignupLoginView(),
-        //  binding:SignupLoginBinding(),
+          binding:SignupLoginBinding(),
          ),
         // GetPage(name: RouteName.Screen,
         //   page: () => HomeScreen(),

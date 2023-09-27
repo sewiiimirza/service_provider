@@ -12,9 +12,19 @@ class _WelcomeState extends State<Welcome> {
     return Scaffold(
       body: Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image(image:AssetImage('assets/images/welcome.png')),
-            Text('Get Started'),
+            Image.asset('assets/images/welcome.png',
+            height: 150,
+            width: 150,
+            fit: BoxFit.cover),
+        Column(
+              children: [
+                Text('Get Started',
+                    textAlign: TextAlign.center,
+                    style:Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.black)),
+              ],
+            ),
             Row(
               children: [
                 OutlinedButton(

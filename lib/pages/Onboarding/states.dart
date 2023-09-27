@@ -6,8 +6,8 @@ class OnboardingState {
 
  RxInt currentPage = 0.obs;
 
- OnPageChangeCallback(int activePageIndex) =>
-     currentPage.value = activePageIndex;
+ //OnPageChangeCallback(int activePageIndex) =>
+   //  currentPage.value = activePageIndex;
 }
 
 
