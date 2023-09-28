@@ -1,20 +1,29 @@
 
 import 'dart:core';
+
 import 'package:e_services/pages/Onboarding/states.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../res/component/onboarding_pages.dart';
+import '../Welcome/view.dart';
+
 
 
 class OnboardingController extends GetxController{
  OnboardingController();
-  final state = OnboardingState;
-  var  pageController=PageController();
+ final state = OnboardingState;
+ var  currentPage = 0.obs;
+ bool get isLastPage=> currentPage.value== pages.length-1;
+ var  pageController=PageController();
 
 
-  forwardAction(){
-    pageController.nextPage(duration:300.milliseconds, curve: Curves.ease);
-}
+  forwardAction() {
+    if (isLastPage){
+      Get.offAll(WelcomeView());
+    } else
+      pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
+
+  }
 
  List<OnboardingPages>pages=[
 
@@ -31,10 +40,10 @@ class OnboardingController extends GetxController{
 
 
 
- //  @override
- // void Navigate(){
- //   Future.delayed(Duration(seconds: 3),()=>Get.offAll(Welcome()));
- // }//used for navigation and routing things
+  @override
+ void Navigate(){
+   Future.delayed(Duration(milliseconds: 300),()=>Get.offAll(WelcomeView()));
+ }//used for navigation and routing things
 
 }//
 // now controller and state are called from UI

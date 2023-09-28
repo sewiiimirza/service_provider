@@ -12,7 +12,6 @@ class WelcomeController extends GetxController{
 
 
   void navigate(){
-
     Future.delayed(const Duration(seconds: 3),()=>Get.offAllNamed(AppRoutes.Login_Sign_Up));
   }//used for navigation and routing things
 

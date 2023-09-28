@@ -1,6 +1,7 @@
 
 
 import 'package:e_services/pages/SignUp_Login/states.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../utils/routes/route_name.dart';
@@ -8,6 +9,8 @@ import '../../utils/routes/route_name.dart';
 class SignupLoginController extends GetxController{
   final  state = SignupLoginState();//not change over time
   SignupLoginController();
+
+
 
 
   // void navigate(){

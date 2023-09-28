@@ -35,7 +35,7 @@ class AppPages {
          ),
     GetPage(
       name: AppRoutes.WelcomeScreen,
-      page: () =>Welcome(),
+      page: () =>WelcomeView(),
       binding:WelcomeBinding(),
     ),
           GetPage(
