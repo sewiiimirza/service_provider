@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class AppColors {
 
-  static const Color secondaryColor =  Color(0xff1c4398);
-  static const Color primaryColor =  Color.fromRGBO(131, 110, 199, 1.0);
+  static const Color secondaryColor =  Color(0xff0844b4);
+  static const Color primaryColor =  Color.fromRGBO(
+      163, 26, 255, 0.9882352941176471);
 
   static const Color secondaryTextColor =  Color(0xFF124DEA);
   static const Color primaryTextColor =  Color(0xff130d0d);
@@ -19,7 +20,7 @@ class AppColors {
 
   static const Color successColor =  Color(0xff043dcd);
 
-  static const Color iconBackgroundColor = Color(0xffdfdfe1);
+  static const Color iconBackgroundColor = Color(0xff124dea);
   static const Color inputTextBorderColor =  Color.fromRGBO(198, 0, 253, 1.0);
   static const Color hintColor =  Color.fromRGBO(114, 114, 114, 1);
 
