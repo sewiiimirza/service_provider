@@ -7,83 +7,70 @@ import 'package:flutter/material.dart';
 class NameInputTextForm extends StatelessWidget {
   final   TextInputType keyboardType;
   final   bool obsecure;
-  final   Color color,textColor;
-  final  String  descrip ;
+
+  final TextInputAction textInputAction;
+  final TextEditingController contr;
+  final decoration;
 
   const NameInputTextForm({Key? key,
 
-    required this.descrip,
 
-    this.textColor=const Color(0xff92EFFD),
-    this.color= const Color(0xff4E65FF),
+    required this.textInputAction,
+
+    required this.contr,
+
     required this.keyboardType,
 
     required this.obsecure,
+    required this.decoration,
 
   }) : super(key : key );
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8 , vertical: 5),
-        child:TextField(
-          keyboardType: keyboardType,
+    return TextField(
+      keyboardType: keyboardType,
 
-          obscureText: obsecure,
-          decoration: InputDecoration(
-            hintText: descrip,
-            prefixIcon: Icon(Icons.person_outlined, color: Colors.blue,),
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.purple, style: BorderStyle.solid,),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
-          ),
+      obscureText: obsecure,
+      decoration: decoration,
+      controller: contr,
 
-        ));
+    );
   }
 }
 class InputTextForm extends StatelessWidget {
   final TextInputType keyboardType;
   final bool obsecure;
   final TextEditingController contr;
+
+  final  decoration;
+  final TextInputAction textInputAction;
   final FocusNode focNode;
-  final Color color, textColor;
-  final String descrip;
+
 
   const InputTextForm({Key? key,
     required this.contr,
-    required this.descrip,
     required this.focNode,
+  required this. textInputAction,
 
-    this.textColor = const Color(0xff92EFFD),
-    this.color = const Color(0xff4E65FF),
+
     required this.keyboardType,
 
     required this.obsecure,
+    this.decoration,
 
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-        child: TextField(
+    return TextField(
           controller: contr,
           keyboardType: keyboardType,
           focusNode: focNode,
           obscureText: obsecure,
-          decoration: InputDecoration(
-            hintText: descrip,
-            prefixIcon: Icon(Icons.email_outlined, color: Colors.blue,),
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.purple, style: BorderStyle.solid,),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
-          ),
+          decoration: decoration,
 
-        ));
+          );
   }
 
 }
@@ -91,45 +78,34 @@ class PasswordInputTextForm extends StatelessWidget {
   final   TextInputType keyboardType;
   final   bool obsecure;
   final  TextEditingController contr;
+
   final FocusNode focNode;
+  final decoration ;
 
-  final   Color color,textColor;
-  final  String  descrip ;
 
+  final TextInputAction textInputAction;
   const PasswordInputTextForm({Key? key,
     required this.contr,
-    required this.descrip,
     required this.focNode,
+    required this. textInputAction,
 
-
-    this.textColor=const Color(0xff92EFFD),
-    this.color= const Color(0xff4E65FF),
     required this.keyboardType,
 
     required this.obsecure,
+    required this.decoration,
 
   }) : super(key : key );
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8 , vertical: 5),
-        child:TextField(
+    return TextField(
           controller: contr,
           keyboardType: keyboardType,
           focusNode: focNode,
           obscureText: obsecure,
-          decoration: InputDecoration(
-            hintText: descrip,
-            prefixIcon: Icon(Icons.password_outlined, color: Colors.blue,),
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.purple, style: BorderStyle.solid,),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
-          ),
+          decoration:decoration,
 
-        ));
+        );
   }
 }
 
@@ -138,18 +114,19 @@ class PhoneNoInputTextForm extends StatelessWidget {
   final   TextInputType keyboardType;
   final   bool obsecure;
 
-  final   Color color,textColor;
-  final  String  descrip ;
+  final TextInputAction textInputAction;
+  final TextEditingController contr;
+  final decoration;
 
   const PhoneNoInputTextForm({Key? key,
-    required this.descrip,
 
-
-    this.textColor=AppColors.primaryTextColor,
-    this.color=AppColors.secondaryColor,
     required this.keyboardType,
 
     required this.obsecure,
+   required this.textInputAction,
+
+   required this.contr,
+    required this.decoration,
 
   }) : super(key : key );
 
@@ -158,16 +135,12 @@ class PhoneNoInputTextForm extends StatelessWidget {
     return TextField(
           keyboardType: keyboardType,
           obscureText: obsecure,
-          decoration: InputDecoration(
-            hintText: descrip,
-            prefixIcon: Icon(Icons.numbers, color: AppColors.iconBackgroundColor,),
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.purple, style: BorderStyle.solid,),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
-          ),
+          textInputAction: textInputAction,
+          decoration:decoration,
+
+      controller: contr,
 
         );
   }
 }
+

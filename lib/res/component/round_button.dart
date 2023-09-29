@@ -7,11 +7,12 @@ class RoundButton extends StatelessWidget {
   final VoidCallback onPress;
   final Color color,textColor;
   final bool loading ;
+
    const  RoundButton({Key? key,
     required this.title,
     required this.onPress,
-  this.textColor=AppColors.primaryTextColor,
-    this.color= AppColors.secondaryColor,
+  this.textColor=Colors.white,
+    this.color= AppColors.primaryColor,
      this.loading=false,
 
    }) : super(key : key );

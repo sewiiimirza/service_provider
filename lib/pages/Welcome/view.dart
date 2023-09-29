@@ -36,7 +36,7 @@ class WelcomeView extends GetView<WelcomeController>{
               children: [
                 SizedBox(width: 10.0,),
                 RoundButton(title: 'Login', onPress: (
-                //    controller.ne
+                  //  _controller.LoginPage();
                     ){}),
               // OutlinedButton(
                 //     onPressed:(){
