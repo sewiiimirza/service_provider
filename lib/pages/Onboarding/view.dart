@@ -13,6 +13,7 @@ class OnboardingView extends GetView <OnboardingController> {
   @override
   Widget build(BuildContext context) {
   // _controller.Navigate();
+    final height=MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
       body:SafeArea(
@@ -26,8 +27,8 @@ class OnboardingView extends GetView <OnboardingController> {
                         itemBuilder:(context,index){
                       return Container(
                         padding: EdgeInsets.all(5.0),
-                        // height: 50,
-                        // width: 50,
+                         // height: 50,
+                         // width: 50,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -38,7 +39,7 @@ class OnboardingView extends GetView <OnboardingController> {
                               Text(
                                  _controller.pages[index].title,
                                   textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontWeight:FontWeight.w700,color: AppColors.primaryTextColor)
+                                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontWeight:FontWeight.w600,color: AppColors.primaryColor)
                           ),
                               SizedBox(height: 32,),
                             Padding(
@@ -46,7 +47,7 @@ class OnboardingView extends GetView <OnboardingController> {
                             child:Text(
                                   _controller.pages[index].description,
                                   textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontSize:23,fontWeight:FontWeight.w400,color: AppColors.primaryTextColor,),),
+                                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize:24,fontWeight:FontWeight.w500,color: AppColors.primaryTextColor,),),
                             ),
                               ]
                           ),
@@ -55,7 +56,8 @@ class OnboardingView extends GetView <OnboardingController> {
         }),
 
         Positioned(
-                    bottom: 40,
+                    bottom: 50,
+                     left:20,
 
 
                    child:Row(
@@ -64,8 +66,8 @@ class OnboardingView extends GetView <OnboardingController> {
                                     (index) => Obx((){
                                       return  Container(
                                         margin: const EdgeInsets.all(4),
-                                        height: 12,
-                                        width: 12,
+                                        height: 13,
+                                        width: 13,
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           color:_controller.currentPage.value == index
@@ -82,17 +84,19 @@ class OnboardingView extends GetView <OnboardingController> {
 
 
             Positioned(
-               right: 5,
+               right: 15,
                 bottom: 30,
               child: Container(
-              height: 80,
-                width: 180,
-                decoration: BoxDecoration(color: Colors.blueAccent),
+              height: 60,
+                width: 120,
+                decoration: BoxDecoration(color: AppColors.primaryColor,//Colors.blueAccent,
+                borderRadius: BorderRadius.circular(25)),
                 child:TextButton(
                   onPressed:()=>
                       _controller.forwardAction(),
-                  child: Text(_controller.isLastPage?'Start':'Next',style: TextStyle(fontSize:20,fontWeight: FontWeight.bold),),
-                )
+                  child: Text(_controller.isLastPage?'Start':'Next',
+                    style: TextStyle(fontSize:20,fontWeight: FontWeight.bold,color: Colors.white),),
+                ),
 
 
               ),
@@ -101,17 +105,19 @@ class OnboardingView extends GetView <OnboardingController> {
 
 
             Positioned(
-              right: 30,
+              right: 20,
               top:30 ,
              child: Container(
                 height: 60,
-                      width: 120,
-               child:FloatingActionButton(
-                elevation: 0,
+                      width: 80,
+               decoration: BoxDecoration(color: AppColors.primaryColor,//Colors.blueAccent,
+                   borderRadius: BorderRadius.circular(25)),
+               child:TextButton(
                 //splashColor: AppColors.secondaryColor,
                onPressed:()=>
                _controller.skipAction(),
-                child: Text('Skip',),
+                child: Text('Skip',
+                  style: TextStyle(fontSize:20,fontWeight: FontWeight.bold,color: Colors.white),),
 
                 ),
              ),

@@ -1,9 +1,9 @@
-import 'package:e_services/res/component/round_button.dart';
+
 import 'package:e_services/res/component/sign_up_button.dart';
+import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import '../../res/colors/color.dart';
 import 'controller.dart';
 
 
@@ -21,7 +21,7 @@ class WelcomeView extends GetView<WelcomeController>{
       body: Container(
         padding: EdgeInsets.all(5.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image(image: AssetImage('assets/images/welcome.png'),
                // height:height*0.6,
@@ -30,12 +30,54 @@ class WelcomeView extends GetView<WelcomeController>{
               children: [
                 Text('Find a best home Services \n we are ready for you',
                     textAlign: TextAlign.center,
-                    style:Theme.of(context).textTheme.headlineMedium!.copyWith(fontWeight:FontWeight.bold,color: Colors.black)),
-              ],
-            ),
-           // Row(
-           //    children: [
-           //      SizedBox(width: 10.0,),
+                    style:Theme.of(context).textTheme.headlineMedium!
+                        .copyWith(fontWeight:FontWeight.bold,
+                        color: Colors.black)),
+   ]
+    ),
+
+
+           Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+         children: [
+         SignUpButton(),
+           Container(
+             padding: EdgeInsets.all(11.0),
+             // height: 60,
+             // width: 180,
+             decoration: BoxDecoration(
+               color: AppColors.primaryColor,
+               borderRadius: BorderRadius.circular(50),
+             ),
+           child:  TextButton(
+                   onPressed: () => Get.toNamed('/customer_signup'),
+             child: Center(child:Text('SignUp',
+               style:Theme.of(context).textTheme.headlineMedium!
+                   .copyWith(fontSize: 30,fontWeight:FontWeight.bold,
+                   color:Colors.white),
+             ),
+                 ),
+
+
+             ),
+           ),
+        // TextButton(
+        //   onPressed: () {
+        //     },
+        //    child: Text('Sign Up'),
+        //     ),
+        //
+        //    ],
+        //    ),
+
+
+
+
+
+
+
+
+    //      SizedBox(width: 10.0,),
            //      RoundButton(title: 'Login', onPress: (
            //        //  _controller.LoginPage();
            //          ){}),
@@ -46,15 +88,16 @@ class WelcomeView extends GetView<WelcomeController>{
                 // const SizedBox(
                 //   height: 7.0,
                 //   width: 7.0,),
-                SizedBox(width: 10.0,),
-                SignUpScreenButton(title: 'Signup'),
+
+
 
                 // RoundButton(title: 'Signup', onPress: (){}),
                  // ElevatedButton(
                  //    onPressed: (){}, child:Text('Signup'.toUpperCase())),
               ],
             ),
-      ),
-    );
+      ]
+    ),
+    ));
   }
 }

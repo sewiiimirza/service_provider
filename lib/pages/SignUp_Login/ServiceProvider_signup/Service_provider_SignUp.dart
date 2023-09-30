@@ -1,4 +1,5 @@
 
+import 'package:e_services/pages/SignUp_Login/ServiceProvider_signup/controller.dart';
 import 'package:e_services/res/component/input_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,12 +7,13 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import '../../../res/colors/color.dart';
-import '../controller.dart';
+import '../SignupPages/Customer_sign_up/controller.dart';
 
-class ServiceProviderSignUp extends GetView<SignupLoginController> {
+class ServiceProviderSignUp extends GetView<ServicePovider_Signup_Controller> {
   ServiceProviderSignUp({Key? key}) : super(key: key);
 
-  final controller = Get.put<SignupLoginController>(SignupLoginController());
+  final signupcontroller = Get.put<ServicePovider_Signup_Controller>
+    (ServicePovider_Signup_Controller());
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -24,7 +26,7 @@ class ServiceProviderSignUp extends GetView<SignupLoginController> {
                 textInputAction: TextInputAction.next,
                 obsecure: false,
                 keyboardType: TextInputType.text,
-                contr: controller.state.signUpUserController,
+                contr: signupcontroller.state.signUpUserController,
 
                 decoration:InputDecoration(
                   hintText: 'UserName',
@@ -48,9 +50,9 @@ class ServiceProviderSignUp extends GetView<SignupLoginController> {
                 // textInputAction: TextInputAction.next,
                 obsecure: false,
                 keyboardType: TextInputType.emailAddress,
-                // icon: Icons.email_outlined,
-                contr: controller.state.signUpEmailController,
-                focNode: controller.state.signUpEmailFocus,
+              //  icon: Icons.email_outlined,
+                contr: signupcontroller.state.signUpEmailController,
+                focNode: signupcontroller.state.signUpEmailFocus,
                 textInputAction:TextInputAction.next,
 
                 decoration:const InputDecoration(
@@ -82,7 +84,7 @@ class ServiceProviderSignUp extends GetView<SignupLoginController> {
                 textInputAction: TextInputAction.next,
                 obsecure: false,
                 keyboardType: TextInputType.emailAddress,
-                contr:controller.state.signUpPhoneController,
+                contr:signupcontroller.state.signUpPhoneController,
                 decoration:const InputDecoration(
                   hintText:   ' #Enter your PhoneNo',
                   hintStyle:TextStyle(fontSize: 25,
@@ -109,8 +111,8 @@ class ServiceProviderSignUp extends GetView<SignupLoginController> {
                 obsecure: false,
                 keyboardType: TextInputType.emailAddress,
                 // icon: Icons.email_outlined,
-                contr: controller.state.signUpEmailController,
-                focNode: controller.state.signUpEmailFocus,
+                contr: signupcontroller.state.signUpEmailController,
+                focNode: signupcontroller.state.signUpEmailFocus,
 
                 decoration:InputDecoration(
                   hintText: ' Enter your password',

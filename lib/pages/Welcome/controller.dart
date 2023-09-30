@@ -12,7 +12,8 @@ class WelcomeController extends GetxController{
 
 
   void navigate(){
-    Future.delayed(const Duration(seconds: 3),()=>Get.offAllNamed(AppRoutes.Login_Sign_Up));
+   Future.delayed(const Duration(seconds: 3), ()=>
+        Get.offAll(AppRoutes.Customer_Sign_UpScreen));//);
   }//used for navigation and routing things
 
 }//now controller and state are called from UI

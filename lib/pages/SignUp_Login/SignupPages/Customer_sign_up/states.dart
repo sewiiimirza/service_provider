@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class SignupLoginState{
+class CustomerSignupState{
   // controllers for login
   final loginEmailController = TextEditingController();
   final loginPasswordController = TextEditingController();
