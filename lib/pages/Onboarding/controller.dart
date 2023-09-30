@@ -24,6 +24,14 @@ class OnboardingController extends GetxController{
       pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
 
   }
+skipAction() {
+    if(currentPage!=null) {
+      pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);;
+    }else
+      Get.offAll(WelcomeView());
+     // pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
+
+ }
 
  List<OnboardingPages>pages=[
 

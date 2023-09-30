@@ -1,4 +1,5 @@
 import 'package:e_services/res/component/round_button.dart';
+import 'package:e_services/res/component/sign_up_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -32,12 +33,12 @@ class WelcomeView extends GetView<WelcomeController>{
                     style:Theme.of(context).textTheme.headlineMedium!.copyWith(fontWeight:FontWeight.bold,color: Colors.black)),
               ],
             ),
-            Row(
-              children: [
-                SizedBox(width: 10.0,),
-                RoundButton(title: 'Login', onPress: (
-                  //  _controller.LoginPage();
-                    ){}),
+           // Row(
+           //    children: [
+           //      SizedBox(width: 10.0,),
+           //      RoundButton(title: 'Login', onPress: (
+           //        //  _controller.LoginPage();
+           //          ){}),
               // OutlinedButton(
                 //     onPressed:(){
                 //
@@ -46,13 +47,14 @@ class WelcomeView extends GetView<WelcomeController>{
                 //   height: 7.0,
                 //   width: 7.0,),
                 SizedBox(width: 10.0,),
-                 RoundButton(title: 'Signup', onPress: (){}),
+                SignUpScreenButton(title: 'Signup'),
+
+                // RoundButton(title: 'Signup', onPress: (){}),
                  // ElevatedButton(
                  //    onPressed: (){}, child:Text('Signup'.toUpperCase())),
               ],
-            )
-          ],
-        ),
-      ));
+            ),
+      ),
+    );
   }
 }

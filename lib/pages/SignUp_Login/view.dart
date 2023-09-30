@@ -35,7 +35,7 @@ class SignupLoginView extends GetView<SignupLoginController>{
                         child:Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SignUpPage(),
+                            CustomerSignUp(),
                             Container(
                               padding: EdgeInsets.all(5),
                               height: 70,

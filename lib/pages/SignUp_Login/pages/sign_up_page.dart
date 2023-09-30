@@ -8,8 +8,8 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 import '../../../res/colors/color.dart';
 import '../controller.dart';
 
-class SignUpPage extends GetView<SignupLoginController> {
-  SignUpPage({Key? key}) : super(key: key);
+class CustomerSignUp extends GetView<SignupLoginController> {
+  CustomerSignUp({Key? key}) : super(key: key);
 
   final controller = Get.put<SignupLoginController>(SignupLoginController());
 @override
