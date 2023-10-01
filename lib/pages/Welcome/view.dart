@@ -50,7 +50,7 @@ class WelcomeView extends GetView<WelcomeController>{
                borderRadius: BorderRadius.circular(50),
              ),
            child:  TextButton(
-                   onPressed: () => Get.toNamed('/customer_signup'),
+                   onPressed: () => Get.toNamed(AppRoutes.Customer_Sign_UpScreen),
              child: Center(child:Text('SignUp',
                style:Theme.of(context).textTheme.headlineMedium!
                    .copyWith(fontSize: 30,fontWeight:FontWeight.bold,

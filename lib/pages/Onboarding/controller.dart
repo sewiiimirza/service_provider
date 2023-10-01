@@ -2,6 +2,7 @@
 import 'dart:core';
 
 import 'package:e_services/pages/Onboarding/states.dart';
+import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../res/component/onboarding_pages.dart';
@@ -50,7 +51,7 @@ skipAction() {
 
   @override
  void Navigate(){
-   Future.delayed(Duration(milliseconds: 300),()=>Get.offAll(WelcomeView()));
+   Future.delayed(Duration(milliseconds: 300),()=>Get.offAllNamed(AppRoutes.WelcomeScreen));
  }//used for navigation and routing things
 
 }//

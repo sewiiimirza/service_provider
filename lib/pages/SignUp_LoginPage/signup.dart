@@ -7,13 +7,14 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import '../../../res/colors/color.dart';
-import '../SignupPages/Customer_sign_up/controller.dart';
+import '../../res/colors/color.dart';
+import 'controller.dart';
 
-class SignUp extends GetView<CustomerSignupController> {
+
+class SignUp extends GetView<Customer_Signup_Login_Controller> {
   SignUp({Key? key}) : super(key: key);
 
-  final signupcontroller = Get.put<CustomerSignupController>(CustomerSignupController());
+  final signupcontroller = Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
 @override
   Widget build(BuildContext context) {
   return Form(
