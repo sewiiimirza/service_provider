@@ -9,10 +9,10 @@ import '../../../res/colors/color.dart';
 
 import '../controller.dart';
 
-class Service_ProviderLoginView extends GetView<Customer_Signup_Login_Controller> {
+class Service_ProviderLoginView extends GetView<Provider_Signup_Login_Controller> {
   Service_ProviderLoginView({Key? key}) : super(key: key);
-  final controller = Get.put<Customer_Signup_Login_Controller>(
-      Customer_Signup_Login_Controller());
+  final controller = Get.put<Provider_Signup_Login_Controller>(
+      Provider_Signup_Login_Controller());
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,12 @@ class Service_ProviderLoginView extends GetView<Customer_Signup_Login_Controller
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              SPLoginImage(
-                image: 'assets/images/sp_login.png',
-                title: 'Welcome to E_Services',
-              ),
+             const SPLoginImage(
+                 image:'assets/images/sp_login.png',
+               title:'Login',
+             ),
+              SizedBox(height: 10,),
+
               Container(
                   margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -36,6 +38,17 @@ class Service_ProviderLoginView extends GetView<Customer_Signup_Login_Controller
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         LoginPage(),
+                        SizedBox(height: 5,),
+                        Align(
+                          alignment:Alignment.centerRight,
+                          child: TextButton(onPressed: (){
+                            Get.toNamed(AppRoutes.SP_Forget_Password_Screen);
+
+
+                          }, child: Text('Forget Password ?',style: TextStyle(color:AppColors.primaryColor,fontSize: 22,fontWeight:  FontWeight.bold)),),
+                        ),
+
+
                         SizedBox(
                           height: 20,
                         ),

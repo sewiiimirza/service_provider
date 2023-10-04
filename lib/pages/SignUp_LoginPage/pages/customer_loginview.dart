@@ -28,6 +28,7 @@ class CustomerLoginView extends GetView<Customer_Signup_Login_Controller> {
                 image: 'assets/images/signup.png',
                 title: 'Welcome to E_Services',
               ),
+              SizedBox(height:5),
               Container(
                   margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -36,6 +37,16 @@ class CustomerLoginView extends GetView<Customer_Signup_Login_Controller> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         LoginPage(),
+                        SizedBox(height: 5,),
+                        Align(
+                          alignment:Alignment.centerRight,
+                          child: TextButton(onPressed: (){
+                            Get.toNamed(AppRoutes.Customer_forget_Password_Screen);
+
+                          }, child: Text('Forget Password ?',style: TextStyle(color:AppColors.primaryColor,fontSize: 25,fontWeight:  FontWeight.bold)),),
+                        ),
+
+
                         SizedBox(
                           height: 20,
                         ),

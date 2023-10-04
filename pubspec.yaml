@@ -84,6 +84,7 @@ flutter:
     - assets/images/signup.png
     - assets/images/sp_signup.png
     - assets/images/sp_login.png
+    - assets/images/forget_password.png
 
 
 

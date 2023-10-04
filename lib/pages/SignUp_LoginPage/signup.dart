@@ -4,8 +4,6 @@
 import 'package:e_services/res/component/input_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import '../../res/colors/color.dart';
 import 'controller.dart';
@@ -35,8 +33,9 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                   prefixIcon: const Icon(Icons.person,size: 30,
                  color: AppColors.primaryColor, ),
                  border: OutlineInputBorder(
-                   borderSide: const BorderSide(
+                   borderSide: BorderSide(
                        width: 2.0,
+                    color: Colors.grey.shade600,
                     style:BorderStyle.solid ),
                   borderRadius: BorderRadius.circular(25),
                   ),
@@ -56,7 +55,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                   focNode: signupcontroller.state.signUpEmailFocus,
                   textInputAction:TextInputAction.next, 
 
-                  decoration:const InputDecoration(
+                  decoration: InputDecoration(
                     hintText:  '@ Enter your  Email',
                     hintStyle:TextStyle(fontSize: 25,color:Colors.grey,),
                 prefixIcon: Icon(
@@ -65,6 +64,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
               border: OutlineInputBorder(
                   borderSide: BorderSide(
                     width: 2.0,
+                    color:Colors.grey.shade600,
                     style: BorderStyle.solid,),
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
@@ -86,7 +86,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                 obsecure: false,
                 keyboardType: TextInputType.emailAddress,
                 contr:signupcontroller.state.signUpPhoneController,
-                decoration:const InputDecoration(
+                decoration: InputDecoration(
                   hintText:   ' #Enter your PhoneNo',
                   hintStyle:TextStyle(fontSize: 25,
                     color:Colors.grey,),
@@ -94,9 +94,8 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                     size: 30, color:AppColors.primaryColor,),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
-
                       width: 2.0,
-                      style: BorderStyle.solid,),
+                      style: BorderStyle.solid,color:Colors.grey.shade600,),
                     borderRadius: BorderRadius.all(Radius.circular(25)),
                   ),
                   contentPadding: EdgeInsets.symmetric(vertical: 25), // Increase this value
@@ -130,6 +129,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                      border: OutlineInputBorder(
                        borderSide: BorderSide(
                          width: 2.0,
+                        color: Colors.grey.shade600,
                         style: BorderStyle.solid,
                       ),
                         borderRadius: BorderRadius.circular(25),
@@ -140,7 +140,6 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                    ),
 
                  ),
-
 
           ]
       ),

@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
+import 'package:e_services/pages/HomeScreen/states.dart';
+import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomeController extends GetxController {
+  HomeController();
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+  final state = HomeState;
 }

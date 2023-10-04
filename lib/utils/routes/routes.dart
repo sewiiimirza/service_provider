@@ -1,8 +1,11 @@
 
 
 
+import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/pages/SignUp_LoginPage/bindings.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/customer_forget_password.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/customer_loginview.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/service_provider_forget_password.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/service_provider_login.dart';
 
 import 'package:e_services/pages/Welcome/view.dart';
@@ -56,6 +59,11 @@ class AppPages {
       binding:ProviderSignupLoginBinding(),
     ),
     GetPage(
+      name: AppRoutes.Customer_forget_Password_Screen,
+      page: () =>CustomerForgetPassword(),
+      binding:CustomerSignupLoginBinding(),
+    ),
+    GetPage(
       name: AppRoutes.Service_P_UpScreen,
       page: () =>ServiceProviderSignUp(),
       binding:CustomerSignupLoginBinding(),
@@ -68,11 +76,16 @@ class AppPages {
       page: () =>Service_ProviderLoginView(),
       binding:ProviderSignupLoginBinding(),
     ),
-        // GetPage(name: RouteName.Screen,
-        //   page: () => HomeScreen(),
-        //   transitionDuration: Duration(milliseconds: 250),
-        //   transition: Transition.leftToRightWithFade,
-        // ),
+    GetPage(
+      name: AppRoutes.SP_Forget_Password_Screen,
+      page: () =>SP_Forget_Password(),
+      binding:ProviderSignupLoginBinding(),
+    ),
+
+        GetPage(name: AppRoutes.HomeScreen,
+          page: () => HomeScreen(),
+          binding:HomeBinding(),
+        ),
 
       ];
 }

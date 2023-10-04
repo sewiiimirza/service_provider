@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../colors/color.dart';
 class LoginImage extends StatelessWidget {
   final String image,title;
   const LoginImage({Key? key,
@@ -9,12 +11,17 @@ class LoginImage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+       mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-      child: Image(image: AssetImage('assets/images/login.png',),
-      height:size.height*0.4,
-    )),
+
+      Image(image: AssetImage('assets/images/login.png',),
+      height:size.height*0.3,
+    ),
+          // Center(
+          //     child: Text(title, style: TextStyle(color: AppColors.secondaryColor,
+          //         fontSize: 25,
+          //         fontWeight: FontWeight.bold))
+          // ),
 
     ]
     );
@@ -33,12 +40,15 @@ class SPLoginImage extends StatelessWidget {
     return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-              child: Image(image: AssetImage('assets/images/sp_login.png',
+           Image(image: AssetImage('assets/images/sp_login.png',
               ),
                 height:size.height*0.4,
               //  fit: BoxFit.cover,
-              )
+              ),
+          Center(
+          child: Text(title, style: TextStyle(color: AppColors.secondaryColor,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold))
           ),
 
         ]

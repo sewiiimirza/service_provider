@@ -53,3 +53,31 @@ class SPSignupImage extends StatelessWidget {
     );
   }
 }
+class ForgetPasswordImage extends StatelessWidget {
+  final String image;
+
+  const ForgetPasswordImage({Key? key,
+    required this.image,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Column(
+
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image(image: AssetImage('assets/images/forget_password.png',
+        ),
+          height: size.height * 0.2,
+          //fit: BoxFit.fill,
+        ),
+        // Center(
+        //     child: Text( style: TextStyle(color: AppColors.secondaryColor,
+        //         fontSize: 25,
+        //         fontWeight: FontWeight.bold))
+        // ),
+      ],
+    );
+  }
+}
