@@ -6,14 +6,19 @@ import '../../utils/routes/route_name.dart';
 
 
 
-class WelcomeController extends GetxController{
-  final  state = WelcomeState();//not change over time
+class WelcomeController extends GetxController {
+  final state = WelcomeState(); //not change over time
   WelcomeController();
+//
+// void navigate(required  String userRole) {
+//   // Future.delayed(Duration(microseconds: 300), () {
+//   if (userRole == 'Customer') {
+//     Get.offAllNamed(AppRoutes.Customer_Sign_UpScreen);
+//   } else if (userRole == 'Service Provider') {
+//     Get.offAllNamed(AppRoutes.Service_P_UpScreen);
+//   }
+//   // });
+// }
+  }
 
-
-  void navigate(){
-    Future.delayed( Duration(seconds: 3),()=>
-     Get.offAllNamed(AppRoutes.Customer_Sign_UpScreen));//);
-  }//used for navigation and routing things
-
-}//now controller and state are called from UI
+//now controller and state are called from UI

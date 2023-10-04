@@ -23,69 +23,81 @@ class CustomerSignupView extends GetView<Customer_Signup_Login_Controller>{
     final size=MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: Colors.white,
-       // appBar: AppBar(
-       //   backgroundColor: Colors.white,
-       //    leading: IconButton(
-       //      onPressed: () {
-       //        Navigator.of(context).pop();
-       //      },
-       //      icon: const BackButtonIcon(),
-       //    ),),
-            body:SafeArea(
-              child:SingleChildScrollView(
-               child: Container(
-                 child: Column(
-                     children: [
-                       SignupImage(image:'assets/images/signup.png',
-                         title: 'Welcome to E_Services ',),
-                       Container(
-                           margin: EdgeInsets.symmetric(vertical: 20),
-                           // padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-                           child:Form(
-                             child:Column(
-                               crossAxisAlignment: CrossAxisAlignment.start,
-                               children: [
-                                 SignUp(),
-                                 Container(
-                                   padding: EdgeInsets.all(5),
-                                   height: 70,
-                                   width:double.infinity,
-                                   child:  RoundButton(title: 'Signup',textColor: Colors.white,
-                                       onPress:(
+      body:SafeArea(
+           child: SingleChildScrollView(
+              child: Container(
+                child: Column(
+                    children: [
+                      Row(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Get.toNamed(AppRoutes.WelcomeScreen);
+                              },
+                              child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 20, horizontal: 20),
+                                  child: Icon(Icons.arrow_back, color: Colors
+                                      .blueAccent, size: 40.0,)
 
-                                           ){}),),
-                                 Row(
-                                   mainAxisAlignment: MainAxisAlignment.center,
-                                   children: [
-                                     Center(
-                                       child: Text('Already have an account?',
-                                         style: TextStyle(fontSize: 22,),),
-                                     ),
-                                     TextButton(onPressed: (){
+                              ),
+                            ),
+                          ]
+                      ),
+
+                      SignupImage(image: 'assets/images/signup.png',
+                        title: 'Welcome to E_Services ',),
+                      Container(
+                          margin: EdgeInsets.symmetric(vertical: 20),
+                          // padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                          child: Form(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SignUp(),
+                                Container(
+                                  padding: EdgeInsets.all(5),
+                                  height: 70,
+                                  width: double.infinity,
+                                  child: RoundButton(
+                                      title: 'Signup', textColor: Colors.white,
+                                      onPress: () {}),),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Center(
+                                      child: Text('Already have an account?',
+                                        style: TextStyle(fontSize: 22,),),
+                                    ),
+                                    TextButton(onPressed: () {
                                       Get.offAllNamed(AppRoutes.Login_Screen);
-                                     },
-                                       child:Text('Login',
-                                         style: TextStyle(color:AppColors.primaryColor,fontSize: 25,fontWeight: FontWeight.bold),),),
+                                    },
+                                      child: Text('Login',
+                                        style: TextStyle(
+                                            color: AppColors.primaryColor,
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold),),),
 
 
-                                   ],
-                                 )
+                                  ],
+                                )
 
 
-                               ],
-                             ),
+                              ],
+                            ),
 
-                           )
-                       ),
+                          )
+                      ),
 
 
-                     ]
-                 ),
-               ),
-             ),
-           ),
+                    ]
+                ),
+              ),
+            ),
 
-    );
+
+
+    ));
 
 
 

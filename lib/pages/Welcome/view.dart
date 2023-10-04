@@ -1,4 +1,6 @@
 
+import 'dart:ffi';
+
 import 'package:e_services/res/component/sign_up_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
@@ -8,12 +10,13 @@ import 'controller.dart';
 
 
 class WelcomeView extends GetView<WelcomeController>{
-  WelcomeView({Key? key}): super(key: key);
-  final controller=Get.put<WelcomeController>(WelcomeController());
+  WelcomeView({Key? key}) : super(key: key);
+  final controller = Get.put<WelcomeController>(WelcomeController());
+
+
 
   @override
   Widget build(BuildContext context) {
-    controller.navigate();
  //   var height=MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -36,11 +39,33 @@ class WelcomeView extends GetView<WelcomeController>{
    ]
     ),
 
-
-           Column(
+            Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
          children: [
-         SignUpButton(),
+             // SignUpButton(
+             //     onCustomerPressed: () =>Get.toNamed(AppRoutes.Service_P_UpScreen),
+             //     onServiceProviderPressed: () => Get.toNamed(AppRoutes.Customer_Sign_UpScreen),
+             // ),
+
+               Container(
+                 padding: EdgeInsets.all(11.0),
+                 decoration: BoxDecoration(
+                   color: AppColors.primaryColor,
+                   borderRadius: BorderRadius.circular(50),
+                 ),
+               child:TextButton(
+                 onPressed: () => Get.toNamed(AppRoutes.Customer_Sign_UpScreen),
+             child: Center(child:Text('Customer',
+               style:Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 30,fontWeight:FontWeight.bold,
+                   color:Colors.white),
+             ),
+                 ),
+
+
+             ),
+           ),
+
+           SizedBox(height: 10.0,),
            Container(
              padding: EdgeInsets.all(11.0),
              // height: 60,
@@ -49,54 +74,20 @@ class WelcomeView extends GetView<WelcomeController>{
                color: AppColors.primaryColor,
                borderRadius: BorderRadius.circular(50),
              ),
-           child:  TextButton(
-                   onPressed: () => Get.toNamed(AppRoutes.Customer_Sign_UpScreen),
-             child: Center(child:Text('SignUp',
-               style:Theme.of(context).textTheme.headlineMedium!
-                   .copyWith(fontSize: 30,fontWeight:FontWeight.bold,
-                   color:Colors.white),
-             ),
-                 ),
+             child:TextButton(
+                 onPressed: () {
+                   Get.offAllNamed(AppRoutes.Service_P_UpScreen);
+                 },
+                 child: Center(
+                   child: Text('Service Provider ', style:Theme.of(context).textTheme.headlineMedium!
+                       .copyWith(fontSize: 30,fontWeight:FontWeight.bold,
+                       color:Colors.white),),
+                 )),
 
-
-             ),
            ),
-        // TextButton(
-        //   onPressed: () {
-        //     },
-        //    child: Text('Sign Up'),
-        //     ),
-        //
-        //    ],
-        //    ),
-
-
-
-
-
-
-
-
-    //      SizedBox(width: 10.0,),
-           //      RoundButton(title: 'Login', onPress: (
-           //        //  _controller.LoginPage();
-           //          ){}),
-              // OutlinedButton(
-                //     onPressed:(){
-                //
-                //     }, child: Text('Login'.toUpperCase(),)),),
-                // const SizedBox(
-                //   height: 7.0,
-                //   width: 7.0,),
-
-
-
-                // RoundButton(title: 'Signup', onPress: (){}),
-                 // ElevatedButton(
-                 //    onPressed: (){}, child:Text('Signup'.toUpperCase())),
               ],
             ),
-      ]
+]
     ),
     ));
   }

@@ -6,7 +6,7 @@ import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../res/component/onboarding_pages.dart';
-import '../Welcome/view.dart';
+
 
 
 
@@ -20,16 +20,16 @@ class OnboardingController extends GetxController{
 
   forwardAction() {
     if (isLastPage){
-      Get.offAll(WelcomeView());
+      Get.offAllNamed(AppRoutes.WelcomeScreen);
     } else
       pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
 
   }
 skipAction() {
     if(currentPage!=null) {
-      pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);;
+      pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
     }else
-      Get.offAll(WelcomeView());
+      Get.offAllNamed(AppRoutes.WelcomeScreen);
      // pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
 
  }
@@ -51,7 +51,8 @@ skipAction() {
 
   @override
  void Navigate(){
-   Future.delayed(Duration(milliseconds: 300),()=>Get.offAllNamed(AppRoutes.WelcomeScreen));
+   Future.delayed(Duration(milliseconds: 300),
+           ()=>Get.offAllNamed(AppRoutes.WelcomeScreen));
  }//used for navigation and routing things
 
 }//

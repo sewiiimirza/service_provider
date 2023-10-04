@@ -32,7 +32,7 @@ class LoginPage extends GetView<Customer_Signup_Login_Controller> {
               color: AppColors.primaryColor,),
             border: OutlineInputBorder(
               borderSide: BorderSide(
-             style: BorderStyle.solid,),
+             style: BorderStyle.solid,color: Colors.grey.shade600),
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
               contentPadding: EdgeInsets.symmetric(vertical: 28), // Increase this value
@@ -50,7 +50,7 @@ class LoginPage extends GetView<Customer_Signup_Login_Controller> {
             focNode: controller.state.loginPasswordFocus,
             decoration: InputDecoration(
              hintText: 'Enter password',
-          hintStyle:TextStyle(fontSize: 25,color:Colors.grey,),
+          hintStyle:TextStyle(fontSize: 25,color:Colors.grey),
           prefixIcon: Icon(Icons.lock_open_outlined,size: 30,
            color: AppColors.primaryColor,),
               suffixIcon:Obx(() =>GestureDetector(
@@ -63,7 +63,7 @@ class LoginPage extends GetView<Customer_Signup_Login_Controller> {
                   ),
              border: OutlineInputBorder(
                 borderSide: BorderSide(
-                  style: BorderStyle.solid,),
+                  style: BorderStyle.solid,color: Colors.grey.shade600),
                 borderRadius: BorderRadius.all(Radius.circular(25)),
               ),
               contentPadding: EdgeInsets.symmetric(vertical: 28), // Increase this value

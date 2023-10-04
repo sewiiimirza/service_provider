@@ -82,6 +82,8 @@ flutter:
     - assets/images/welcome.png
     - assets/images/login.png
     - assets/images/signup.png
+    - assets/images/sp_signup.png
+    - assets/images/sp_login.png
 
 
 
