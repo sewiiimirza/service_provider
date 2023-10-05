@@ -18,7 +18,7 @@ class CustomerForgetPassword extends GetView<Customer_Signup_Login_Controller>{
 
   @override
   Widget build(BuildContext context) {
-    //   void Navigate;
+      controller.navigate();
     final size=MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: Colors.white,
