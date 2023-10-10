@@ -1,15 +1,26 @@
+
+import 'dart:html';
+
+import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/res/colors/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import 'controller.dart';
+
 class HomeScreen extends GetView<HomeController> {
   HomeScreen({Key? key}) : super(key: key);
   final controller = Get.put<HomeController>(HomeController());
 
+
   @override
   Widget build(BuildContext context) {
+    var navBody=[
+      Container(color: Colors.green,),
+      Container(color: Colors.purple,),
+      Container(color: Colors.black,),
+      Container(color: Colors.blueGrey,),
+      Container(color: Colors.cyan,),
+    ];
     return Scaffold(
       backgroundColor: Colors.white,
          appBar: AppBar(
@@ -28,50 +39,89 @@ class HomeScreen extends GetView<HomeController> {
            backgroundColor: Colors.transparent,
           elevation: 0,
          ),
-      body:SafeArea(
-         child:SingleChildScrollView(
-           child: Container(
-             padding: EdgeInsets.all(20.0),
+      body: SafeArea(
+        child: SingleChildScrollView(
              child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
                children: [
-                 Text('HI,\n Need some help today?',style: TextStyle(fontSize: 30,
-                   fontWeight: FontWeight.bold,
-                   color: AppColors.primaryTextColor,
-                 ),),
-                  SizedBox(height:20.0),
-                 Container(decoration: BoxDecoration(border: Border(left: BorderSide(width: 4)),),
-                   padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 NavigationBar(destinations:navBody),
+                 Container(
+                   padding: EdgeInsets.all(20.0),
+                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
-                       Text('Search',style: TextStyle(fontSize: 30,
+
+                       Text('HI,\n Need some help today?',style: TextStyle(fontSize: 30,
                          fontWeight: FontWeight.bold,
-                         color: Colors.grey.withOpacity(0.5),
+                         color: AppColors.primaryTextColor,
                        ),),
-                       Icon(Icons.mic,size: 25,),
-                       
-                     ],
-                   ),
-                 ),
+                        SizedBox(height:20.0),
+                       Container(decoration: BoxDecoration(border: Border(left: BorderSide(width: 4)),),
+                         padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             //search box
+                             Text('Search',style: TextStyle(fontSize: 30,
+                               fontWeight: FontWeight.bold,
+                               color: Colors.grey.withOpacity(0.5),
+                             ),),
 
+                             Icon(Icons.mic,size: 25,),
+                       ]
+                         ),
+                       ),
+                                 SizedBox(height: 5,),
+                                 Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text('Categories',style: TextStyle(fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                  //  color: AppColors.secondaryColor,
+                                    color: Colors.black,
+                                  ),),
+                                  TextButton(onPressed:(){},
+                                    child: Text('ViewAll',style: TextStyle(fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColors.secondaryColor,
+                                    ),),),
+                                ],
+                              ),
 
+                             //categories
+                             SizedBox(
+                               width: 170,
+                               height: 50,
+                               child: Row(
+                                 children: [
+                                   Container(
+                                     width: 50,
+                                     height: 50,
+                                     decoration: BoxDecoration(
+                                      // color: AppColors.iconBackgroundColor,
+                                       borderRadius: BorderRadius.circular(10),
+                                     ),
+                                     child: Center(),
+                                   ),
+                                 ],
+                               ),
 
+                             ),
+
+                           ],
+                         ),
+                       ),
                ],
              ),
 
-           ),
 
 
 
-
+               ),
 
              ),
+      );
 
 
 
-
-         ),
-    );
   }
 }

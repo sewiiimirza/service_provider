@@ -20,7 +20,7 @@ class AppColors {
 
   static const Color successColor =  Color(0xff043dcd);
 
-  static const Color iconBackgroundColor = Color(0xff0a3aa6);
+  static const Color iconBackgroundColor = Color(0xfff8d6c2);
   static const Color inputTextBorderColor =  Color.fromRGBO(110, 8, 143, 1.0);
   static const Color hintColor =  Color.fromRGBO(114, 114, 114, 1);
 

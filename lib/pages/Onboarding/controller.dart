@@ -12,7 +12,7 @@ import '../../res/component/onboarding_pages.dart';
 
 class OnboardingController extends GetxController{
  OnboardingController();
- final state = OnboardingState;
+ final state = OnboardingState();
  var  currentPage = 0.obs;
  bool get isLastPage=> currentPage.value== pages.length-1;
  var  pageController=PageController();
