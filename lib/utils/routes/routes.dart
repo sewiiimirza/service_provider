@@ -1,7 +1,11 @@
 
 
 
+import 'package:e_services/pages/BookingScreen/booking.dart';
+import 'package:e_services/pages/CategoryScreen/category.dart';
+import 'package:e_services/pages/ChatScreen/chat.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
+import 'package:e_services/pages/ProfileScreen/view.dart';
 import 'package:e_services/pages/SignUp_LoginPage/bindings.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/customer_forget_password.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/customer_loginview.dart';
@@ -9,6 +13,7 @@ import 'package:e_services/pages/SignUp_LoginPage/pages/service_provider_forget_
 import 'package:e_services/pages/SignUp_LoginPage/pages/service_provider_login.dart';
 
 import 'package:e_services/pages/Welcome/view.dart';
+import 'package:e_services/res/component/navigation_bar.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -82,10 +87,31 @@ class AppPages {
       binding:ProviderSignupLoginBinding(),
     ),
 
-        GetPage(name: AppRoutes.HomeScreen,
-          page: () => HomeScreen(),
-          binding:HomeBinding(),
-        ),
+
+    GetPage(name: AppRoutes.NavigationMenu,
+      page: () => NavigationMenu(),
+    ),
+    GetPage(name: AppRoutes.HomeScreen,
+      page: () => HomeScreen(),
+      binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.BookingView,
+      page: () => BookingView(),
+    //  binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.CategogyView,
+      page: () => CategoryView(),
+     // binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.ChatView,
+      page: () => ChatView(),
+    //  binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.ProfileView,
+      page: () => ProfileView(),
+     // binding:HomeBinding(),
+    ),
+
 
       ];
 }

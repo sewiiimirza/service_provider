@@ -1,5 +1,4 @@
 
-import 'dart:html';
 
 import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/res/colors/color.dart';
@@ -14,13 +13,7 @@ class HomeScreen extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    var navBody=[
-      Container(color: Colors.green,),
-      Container(color: Colors.purple,),
-      Container(color: Colors.black,),
-      Container(color: Colors.blueGrey,),
-      Container(color: Colors.cyan,),
-    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
          appBar: AppBar(
@@ -43,7 +36,6 @@ class HomeScreen extends GetView<HomeController> {
         child: SingleChildScrollView(
              child: Column(
                children: [
-                 NavigationBar(destinations:navBody),
                  Container(
                    padding: EdgeInsets.all(20.0),
                    child: Column(

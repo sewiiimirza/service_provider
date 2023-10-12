@@ -1,56 +1,74 @@
 
+import 'package:e_services/pages/BookingScreen/booking.dart';
+import 'package:e_services/pages/CategoryScreen/category.dart';
+import 'package:e_services/pages/ChatScreen/chat.dart';
+import 'package:e_services/pages/HomeScreen/index.dart';
+import 'package:e_services/pages/ProfileScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../pages/HomeScreen/controller.dart';
 import '../colors/color.dart';
 
-class NavigationBar extends StatelessWidget {
-  final List<Widget> destinations;
-   NavigationBar({Key? key,required this.destinations}) : super(key: key);
-   final controller = Get.put<HomeController>(HomeController());
+class NavigationMenu extends StatelessWidget {
+  const NavigationMenu({super.key});
+
   @override
   Widget build(BuildContext context) {
-  var navbarItem=[
-  BottomNavigationBarItem(icon: Image.asset('assets/icons/home.png',height: 30,width:26),label: "Home"),
-  BottomNavigationBarItem(icon: Image.asset('assets/icons/bookings.png',height: 30,width:26),label: "Bookings"),
-  BottomNavigationBarItem(icon: Image.asset('assets/icons/categories.png',height: 30,width:26),
-  label: "Categories"),
-  BottomNavigationBarItem(icon: Image.asset('assets/icons/chat.png',height:30,width:26),label: "Chat"),
-  BottomNavigationBarItem(icon: Image.asset('assets/icons/profile.png',height: 30,width:26),label: "Profile"),
-  ];
+    final controller=Get.put(NavigationMenuController());
+    var navbarItem=[
+      BottomNavigationBarItem(icon: Image.asset("assets/icons/home.png",width:50,height: 40,),label: "Home",),
+      BottomNavigationBarItem(icon: Image.asset("assets/icons/bookings.png",width:50,height: 40,),label: "Bookings",),
+      BottomNavigationBarItem(icon: Image.asset("assets/icons/categories.png",width:50,height: 40,),label: "Categories",),
+      BottomNavigationBarItem(icon: Image.asset("assets/icons/chat.png",width:50,height: 40,),label: "Chat",),
+      BottomNavigationBarItem(icon: Image.asset("assets/icons/profile.png",width:50,height: 40,),label: "Profile",),
+    ];
+    var navBody=[
+      HomeScreen(),
+      BookingView(),
+      CategoryView(),
+      ChatView(),
+      ProfileView(),
 
-  return Scaffold(
-  backgroundColor: Colors.white,
 
-  body: SafeArea(
-  child:SingleChildScrollView(
-  child: Container(
-  padding: EdgeInsets.all(20.0),
-  child: Column(
-  children: [
-    destinations.elementAt(controller.currentNavIndex.value),
-    ],
-   ),
+    ];
 
-  ),
+    return Scaffold(
+     body:Column(
+       children: [
+         Obx(()=>
+        Expanded(child:navBody.elementAt(controller.currentNavIndex.value),)),
+       ],
+     ),
+      bottomNavigationBar: Obx(()=>
+       Container(
+         height:80,
 
-  ),
-  ),
+      child:BottomNavigationBar(
+          currentIndex:controller.currentNavIndex.value,
+          selectedItemColor: AppColors.primaryColor,
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800),
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+          items:navbarItem,
+          onTap: (value){
+            controller.currentNavIndex.value=value;
+          },
 
-  bottomNavigationBar: BottomNavigationBar(
-currentIndex:controller.currentNavIndex.value,
-selectedItemColor: AppColors.primaryColor,
-selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-type: BottomNavigationBarType.fixed,
-backgroundColor: Colors.white,
-items:navbarItem,
-onTap: (value){
-controller.currentNavIndex.value=value;
-},
-),
-);
+
+        ),
+      ),
+
+    ),
+    );
+  }
+}
+
+
+
+class NavigationMenuController extends GetxController {
+  final RxInt currentNavIndex = 0.obs;
 
 
 }
-}
+
+
+

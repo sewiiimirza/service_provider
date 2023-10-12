@@ -24,7 +24,7 @@ class Customer_Signup_Login_Controller extends GetxController {
 
 void navigate() {
   Future.delayed(const Duration(milliseconds: 300), () =>
-      Get.offAllNamed(AppRoutes.HomeScreen));
+      Get.offAllNamed(AppRoutes.NavigationMenu));
 
 }//used for navigation and routing things
 
