@@ -86,7 +86,11 @@ flutter:
     - assets/images/signup.png
     - assets/images/sp_signup.png
     - assets/images/sp_login.png
-    - assets/images/forget_password.png
+    - assets/images/featured1.png
+    - assets/images/featured2.png
+    - assets/images/featured3.png
+    - assets/images/featured4.png
+    -
     - assets/icons/home.png
     - assets/icons/bookings.png
     - assets/icons/categories.png
@@ -100,6 +104,7 @@ flutter:
     - assets/icons/salon.png
     - assets/icons/repair.png
     - assets/icons/laundry.png
+    -
     -
     -
     -

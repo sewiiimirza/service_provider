@@ -57,7 +57,9 @@ class CustomerLoginView extends GetView<Customer_Signup_Login_Controller> {
                           child: RoundButton(
                               title: 'Login',
                               textColor: Colors.white,
-                              onPress: () {}),
+                              onPress: () {
+                                 Get.toNamed(AppRoutes.NavigationMenu);
+                              }),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -21,11 +21,11 @@ class Customer_Signup_Login_Controller extends GetxController {
 
 
 
-
-void navigate() {
-  Future.delayed(const Duration(milliseconds: 300), () =>
-      Get.offAllNamed(AppRoutes.NavigationMenu));
-
-}//used for navigation and routing things
+//
+// void navigate() {
+//   Future.delayed(const Duration(milliseconds: 300), () =>
+//       Get.offAllNamed(AppRoutes.NavigationMenu));
+//
+// }//used for navigation and routing things
 
 }//now controller and state are called from UI
