@@ -22,6 +22,7 @@ class AppColors {
 
   static const Color iconBackgroundColor = Color(0xfff8d6c2);
   static const Color inputTextBorderColor =  Color.fromRGBO(110, 8, 143, 1.0);
+  static const Color textFeaturedColor =  Color(0xff467df1);
   static const Color hintColor =  Color.fromRGBO(114, 114, 114, 1);
 
   static const Color textFieldDefaultFocus =  Color(0xfff5f5f6);
