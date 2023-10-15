@@ -80,8 +80,8 @@ class HomeScreen extends GetView<HomeController> {
                                             ],
                                           ),
                                          //categories
-                                             Row(
-                                             children: [
+                                                 Row(
+                                                     children: [
                                                Container(
                                                          width: 90,
                                                          height: 120,

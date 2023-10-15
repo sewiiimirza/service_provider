@@ -22,16 +22,17 @@ class CategoryView extends GetView<CategoryController> {
         //  elevation: 0,
 
       ),
-    body: ListView(
-    scrollDirection: Axis.horizontal,
-    children: [
-    CategoryItem(
+
+    body:Row(
+    children:[
+      CategoryItem(
     imageName: 'plumber',
     categoryName: 'Plumber',
     onTap: () {
     // Handle category tap
     },
     ),
+    SizedBox(width: 10,),
     CategoryItem(
     imageName: 'electrician',
     categoryName: 'Electrician',
