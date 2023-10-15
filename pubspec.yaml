@@ -93,10 +93,12 @@ flutter:
     - assets/images/featured painter.png
     - assets/images/featured salon.png
     - assets/images/featured laundry.png
+    - assets/images/featured smartdevice.png
     - assets/images/service_provider1.png
     - assets/images/service_provider2.png
     - assets/images/service_provider3.png
     - assets/icons/home.png
+    - assets/icons/smartphone.png
     - assets/icons/bookings.png
     - assets/icons/categories.png
     - assets/icons/chat.png

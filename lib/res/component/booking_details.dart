@@ -9,6 +9,8 @@ class BookingDetail extends StatelessWidget {
   final String serviceProviderImage;
   final String description;
   final double discount;
+  final String  day;
+  final String time;
 
   BookingDetail({super.key,
     required this.serviceName,
@@ -19,6 +21,8 @@ class BookingDetail extends StatelessWidget {
     required this.serviceProviderImage,
     required this.description,
     required this.discount,
+    required this.day,
+    required this.time,
   });
   @override
   Widget build(BuildContext context) {
@@ -88,10 +92,13 @@ class BookingDetail extends StatelessWidget {
           Text('Description: $description'),
           SizedBox(height: 10),
           Text('Discount: ${discount.toStringAsFixed(2)}% Off'),
+          SizedBox(height: 10),
+          Text('Day: $day'),
+          SizedBox(height: 10),
+          Text('Time: $time'),
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              // Add your booking logic here
             },
             child: Text('Book Now'),
           ),

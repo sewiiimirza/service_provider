@@ -1,8 +1,12 @@
 
 import 'package:e_services/res/colors/color.dart';
 import 'package:e_services/res/component/booking_details.dart';
+import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
+import '../../pages/BookingScreen/booking.dart';
 import '../../pages/BookingScreen/booking.dart';
 
 class ServiceContainer extends StatelessWidget {
@@ -26,15 +30,10 @@ class ServiceContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    GestureDetector(
+      return GestureDetector(
         onTap: () {
-         Get.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => BookingView(),
-            ),
-          );
-        },
+          Get.toNamed(AppRoutes.BookingView);
+          },
    child: Container(
       width: 320,
       height: 300,
