@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
+import '../../utils/routes/route_name.dart';
 import '../colors/color.dart';
 
 class CategoryItem extends StatelessWidget {
   final String imageName;
   final String categoryName;
-  final VoidCallback onTap;
 
   CategoryItem({
     required this.imageName,
     required this.categoryName,
-    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+    onTap: () {
+      Get.toNamed(AppRoutes.FeaturedView);
+    },
        child: Container(
             width: 90,
             height: 120,

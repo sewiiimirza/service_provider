@@ -5,6 +5,7 @@ import 'package:e_services/res/colors/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../res/component/service_detail.dart';
+import '../../utils/routes/route_name.dart';
 import 'controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -26,7 +27,8 @@ class HomeScreen extends GetView<HomeController> {
            title: Text('E_Services',
            style: TextStyle(fontSize: 30,
              fontWeight: FontWeight.bold,
-             color: AppColors.secondaryColor,
+             color: Colors.white
+             //AppColors.secondaryColor,
            ),
      ),
            centerTitle: true,
@@ -72,7 +74,9 @@ class HomeScreen extends GetView<HomeController> {
                                               //  color: AppColors.secondaryColor,
                                                 color: Colors.black,
                                               ),),
-                                              OutlinedButton(onPressed:(){},
+                                              OutlinedButton(onPressed:(){
+                                                Get.toNamed(AppRoutes.CategogyView);
+                                              },
                                                 child: Text('ViewAll',style: TextStyle(fontSize: 25,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.secondaryColor,
@@ -199,7 +203,9 @@ class HomeScreen extends GetView<HomeController> {
                                      //  color: AppColors.secondaryColor,
                                      color: Colors.black,
                                    ),),
-                                   OutlinedButton(onPressed:(){},
+                                   OutlinedButton(onPressed:(){
+                                     Get.toNamed(AppRoutes.FeaturedView);
+                                   },
                                      child: Text('ViewAll',style: TextStyle(fontSize: 25,
                                        fontWeight: FontWeight.bold,
                                        color: AppColors.secondaryColor,
@@ -214,7 +220,7 @@ class HomeScreen extends GetView<HomeController> {
                                           scrollDirection: Axis.horizontal,
                                           children: [
                                             ServiceContainer(
-                                              imageUrl: 'assets/images/featured smartphone.png',
+                                              imageUrl: 'assets/images/featured smart_device.png',
                                               price: 20.0,
                                               feedbackStars: 4,
                                               serviceName: "Smart Device Maintenance",
@@ -232,7 +238,7 @@ class HomeScreen extends GetView<HomeController> {
                                       serviceLable: "Deep Cleaning",
                                     ),
                                             ServiceContainer(
-                                              imageUrl: 'assets/images/featured cooking.png',
+                                              imageUrl:'assets/images/cooking.png',
                                               price: 50.0,
                                               feedbackStars: 4,
                                               serviceName: "House Hold Cook",

@@ -4,6 +4,8 @@
 import 'package:e_services/pages/BookingScreen/booking.dart';
 import 'package:e_services/pages/CategoryScreen/category.dart';
 import 'package:e_services/pages/ChatScreen/chat.dart';
+import 'package:e_services/pages/ConfirmationScreen/confirmation.dart';
+import 'package:e_services/pages/FeaturedScreen/featured.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/pages/ProfileScreen/view.dart';
 import 'package:e_services/pages/SignUp_LoginPage/bindings.dart';
@@ -99,6 +101,14 @@ class AppPages {
       page: () => BookingView(),
     //  binding:HomeBinding(),
     ),
+    GetPage(name: AppRoutes.FeaturedView,
+      page: () => FeaturedView(),
+      // binding:HomeBinding(),
+    ),
+    // GetPage(name: AppRoutes.ConfirmationScreen,
+    //   page: () => ConfirmationScreen(),
+    //   // binding:HomeBinding(),
+    // ),
     GetPage(name: AppRoutes.CategogyView,
       page: () => CategoryView(),
      // binding:HomeBinding(),

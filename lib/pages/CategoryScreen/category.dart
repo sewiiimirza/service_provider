@@ -19,28 +19,80 @@ class CategoryView extends GetView<CategoryController> {
           ),
         ),
         backgroundColor:AppColors.primaryColor,
-        //  elevation: 0,
+        //  elevation: 0,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                f
 
       ),
 
     body:Row(
     children:[
       CategoryItem(
-    imageName: 'plumber',
-    categoryName: 'Plumber',
-    onTap: () {
-    // Handle category tap
-    },
+    imageName: 'smart_devicee',
+    categoryName: 'SmartHome',
     ),
     SizedBox(width: 10,),
     CategoryItem(
     imageName: 'electrician',
     categoryName: 'Electrician',
-    onTap: () {
-    // Handle category tap
-    },
+
     ),
-    // Add more CategoryItem widgets for other categories
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'plumber',
+        categoryName: 'Plumber',
+
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'cleaning',
+        categoryName: 'Cleaning',
+
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'repair',
+        categoryName: 'AC Repair',
+
+      ),
+
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'cooking',
+        categoryName: 'Cook',
+
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'cooking',
+        categoryName: 'Electrician',
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'carpenter',
+        categoryName: 'Carpenter',
+
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'salon',
+        categoryName: 'Salon',
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'painter',
+        categoryName: 'Painter',
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'laundry',
+        categoryName: 'Laundry',
+
+      ),
+      SizedBox(width: 10,),
+      CategoryItem(
+        imageName: 'electrician',
+        categoryName: 'Electrician',
+      ),
+
     ],
     ),
     );

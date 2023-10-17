@@ -26,17 +26,17 @@ class FeaturedView extends GetView<FeaturedController> {
 
         ),
         body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
+          child:ListView(
+         children:List.generate(
+          10,
+            (index) => Column(
                 children: [
-                  SizedBox(
-                    height: 300,
-                    child: ListView(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        ServiceContainer(
-                          imageUrl: 'assets/images/featured smartphone.png',
+                 //    child: ListView(
+                   //   shrinkWrap: true,
+                    //  scrollDirection: Axis.vertical,
+
+                   ServiceContainer(
+                          imageUrl: 'assets/images/featured smart_device.png',
                           price: 20.0,
                           feedbackStars: 4,
                           serviceName: "Smart Device Maintenance",
@@ -44,7 +44,9 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider3.png',
                           serviceLable: "Smart Home",
                         ),
-                        ServiceContainer(
+
+                       SizedBox(height:10,),
+                       ServiceContainer(
                           imageUrl: 'assets/images/featured cleaning.png',
                           price: 20.0,
                           feedbackStars: 4,
@@ -53,7 +55,8 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider1.png',
                           serviceLable: "Deep Cleaning",
                         ),
-                        ServiceContainer(
+                       SizedBox(height:10,),
+                      ServiceContainer(
                           imageUrl: 'assets/images/featured cooking.png',
                           price: 50.0,
                           feedbackStars: 4,
@@ -62,7 +65,8 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider2.png',
                           serviceLable: "Home Cook",
                         ),
-                        ServiceContainer(
+                        SizedBox(height: 10),
+                       ServiceContainer(
                           imageUrl: 'assets/images/featured repair.png',
                           price: 50.0,
                           feedbackStars: 4,
@@ -71,6 +75,7 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider3.png',
                           serviceLable: "AC Maintenance",
                         ),
+                        SizedBox(height: 10,),
                         ServiceContainer(
                           imageUrl: 'assets/images/featured plumber.png',
                           price: 50.0,
@@ -80,7 +85,8 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider1.png',
                           serviceLable: "Repairing",
                         ),
-                        ServiceContainer(
+                        SizedBox(height: 10),
+                       ServiceContainer(
                           imageUrl: 'assets/images/featured electrician.png',
                           price: 40.0,
                           feedbackStars: 4,
@@ -89,6 +95,7 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider3.png',
                           serviceLable: "Electrician",
                         ),
+                        SizedBox(height: 10,),
                         ServiceContainer(
                           imageUrl: 'assets/images/featured painter.png',
                           price: 50.0,
@@ -98,6 +105,7 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider2.png',
                           serviceLable: "Painter",
                         ),
+                        SizedBox(height: 10,),
                         ServiceContainer(
                           imageUrl: 'assets/images/featured carpenter.png',
                           price: 30.0,
@@ -107,6 +115,7 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider1.png',
                           serviceLable: "Wooden Expert",
                         ),
+                        SizedBox(height: 10,),
                         ServiceContainer(
                           imageUrl: 'assets/images/featured salon.png',
                           price: 70.0,
@@ -116,6 +125,7 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider3.png',
                           serviceLable: "Stylish Look",
                         ),
+                        SizedBox(height: 10,),
                         ServiceContainer(
                           imageUrl: 'assets/images/featured laundry.png',
                           price: 45.0,
@@ -125,18 +135,20 @@ class FeaturedView extends GetView<FeaturedController> {
                           serviceProviderImage: 'assets/images/service_provider1.png',
                           serviceLable: "Cloth Cleaning",
                         ),
-
-
-                      ],
-                    ),
+]
                   ),
 
+            ),),
 
-                ]
+        ),
+                    );
 
-            ),
-          ),
 
-        ));
+
+
+
+
+
+
   }
 }

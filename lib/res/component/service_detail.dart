@@ -1,13 +1,8 @@
 
 import 'package:e_services/res/colors/color.dart';
-import 'package:e_services/res/component/booking_details.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
-import '../../pages/BookingScreen/booking.dart';
-import '../../pages/BookingScreen/booking.dart';
 
 class ServiceContainer extends StatelessWidget {
   final String serviceName;
@@ -59,7 +54,7 @@ class ServiceContainer extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Image.asset(
-                "assets/images/featured cleaning.png",
+                imageUrl,
                   height: 150,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -69,12 +64,21 @@ class ServiceContainer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      children: [
-                        Icon(Icons.star, color: AppColors.secondaryColor),
-                        SizedBox(width: 5),
-                        Text('$feedbackStars Stars'),
-                      ],
-                    ),
+                  children: List.generate(
+                  feedbackStars,
+                      (index) => Icon(
+                    Icons.star,
+                    color: AppColors.secondaryColor,
+                  ),
+                ),
+          ),
+                    // Text(
+                    //   '$feedbackStars Stars',
+                    //   style: TextStyle(
+                    //     fontSize: 18,
+                    //   ),
+                    // ),
+                    Spacer(),
                     Text(
                       '\$$price',
                       style: TextStyle(
@@ -83,9 +87,10 @@ class ServiceContainer extends StatelessWidget {
                         color: Colors.blue,
                       ),
                     ),
-                  ],
+               ]
                 ),
-                SizedBox(height: 10),
+
+               SizedBox(height: 10),
                 Row(
                   children: [
                     CircleAvatar(
@@ -96,11 +101,14 @@ class ServiceContainer extends StatelessWidget {
                     Text(serviceProviderName),
                   ],
                 ),
-              ],
-            ),
+            ]
+          ),
+
+          ),
+
+          ),
           ),
         ),
-      ),
-    ));
+      );
   }
 }
