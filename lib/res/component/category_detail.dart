@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../utils/routes/route_name.dart';
 import '../colors/color.dart';
@@ -9,10 +8,13 @@ class CategoryItem extends StatelessWidget {
   final String imageName;
   final String categoryName;
 
-  CategoryItem({
-    required this.imageName,
-    required this.categoryName,
-  });
+
+  const CategoryItem({Key? key,
+  required this.imageName,
+  required this.categoryName,
+
+}): super(key : key );
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class CategoryItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/icons/$imageName.png", height: 80),
+                    Image.asset("assets/icons/$imageName.png", height: 80),
                 SizedBox(height: 5),
                 Text(
                   categoryName,
@@ -42,6 +44,7 @@ class CategoryItem extends StatelessWidget {
                 ),
               ],
             ),
+
           ),
     );
 

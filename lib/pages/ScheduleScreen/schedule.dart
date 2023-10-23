@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller.dart';
-class ChatView extends GetView<ChatController> {
-   ChatView({super.key});
-  final controller = Get.put<ChatController>(ChatController());
+class ScheduleView extends GetView<ScheduleController> {
+   ScheduleView({super.key});
+  final controller = Get.put<ScheduleController>(ScheduleController());
 
   @override
   Widget build(BuildContext context) {

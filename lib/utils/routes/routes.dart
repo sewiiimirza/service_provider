@@ -3,10 +3,10 @@
 
 import 'package:e_services/pages/BookingScreen/booking.dart';
 import 'package:e_services/pages/CategoryScreen/category.dart';
-import 'package:e_services/pages/ChatScreen/chat.dart';
 import 'package:e_services/pages/ConfirmationScreen/confirmation.dart';
 import 'package:e_services/pages/FeaturedScreen/featured.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
+import 'package:e_services/pages/ProfileScreen/update_screen.dart';
 import 'package:e_services/pages/ProfileScreen/view.dart';
 import 'package:e_services/pages/SignUp_LoginPage/bindings.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/customer_forget_password.dart';
@@ -25,6 +25,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../pages/Onboarding/bindings.dart';
 import '../../pages/Onboarding/view.dart';
 
+import '../../pages/ScheduleScreen/schedule.dart';
 import '../../pages/SignUp_LoginPage/pages/service_provider_signUp.dart';
 import '../../pages/SignUp_LoginPage/pages/customer_signupview.dart';
 import '../../pages/SignUp_LoginPage/login_page.dart';
@@ -113,13 +114,17 @@ class AppPages {
       page: () => CategoryView(),
      // binding:HomeBinding(),
     ),
-    GetPage(name: AppRoutes.ChatView,
-      page: () => ChatView(),
+    GetPage(name: AppRoutes.ScheduleView,
+      page: () => ScheduleView(),
     //  binding:HomeBinding(),
     ),
     GetPage(name: AppRoutes.ProfileView,
       page: () => ProfileView(),
      // binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.UpdateProfileScreen,
+      page: () => UpdateProfileScreen(),
+      // binding:HomeBinding(),
     ),
 
 

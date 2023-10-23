@@ -57,7 +57,7 @@ class FeaturedView extends GetView<FeaturedController> {
                         ),
                        SizedBox(height:10,),
                       ServiceContainer(
-                          imageUrl: 'assets/images/featured cooking.png',
+                          imageUrl:"assets/images/featured cooking.png",
                           price: 50.0,
                           feedbackStars: 4,
                           serviceName: "House Hold Cook",

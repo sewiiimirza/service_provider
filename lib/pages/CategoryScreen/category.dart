@@ -22,12 +22,17 @@ class CategoryView extends GetView<CategoryController> {
         //  elevation: 0,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                f
 
       ),
-
-    body:Row(
+      body:SafeArea(
+       child:Column(
     children:[
+      SizedBox(height: 10,
+      ),
+      Row(
+       children:[
+         SizedBox(width:10 ,),
       CategoryItem(
-    imageName: 'smart_devicee',
-    categoryName: 'SmartHome',
+    imageName: 'smartphone',
+    categoryName: 'Smartphone',
     ),
     SizedBox(width: 10,),
     CategoryItem(
@@ -47,24 +52,24 @@ class CategoryView extends GetView<CategoryController> {
         categoryName: 'Cleaning',
 
       ),
+        ]
+      ),
+      SizedBox(height: 10,),
+      Row(
+        children:[
+          SizedBox(width: 10,),
+      CategoryItem(
+      imageName: 'repair',
+      categoryName: 'AC Repair',
+
+    ),
+
       SizedBox(width: 10,),
       CategoryItem(
-        imageName: 'repair',
-        categoryName: 'AC Repair',
-
+          imageName: 'chef',
+          categoryName: 'Cook',
       ),
 
-      SizedBox(width: 10,),
-      CategoryItem(
-        imageName: 'cooking',
-        categoryName: 'Cook',
-
-      ),
-      SizedBox(width: 10,),
-      CategoryItem(
-        imageName: 'cooking',
-        categoryName: 'Electrician',
-      ),
       SizedBox(width: 10,),
       CategoryItem(
         imageName: 'carpenter',
@@ -76,7 +81,13 @@ class CategoryView extends GetView<CategoryController> {
         imageName: 'salon',
         categoryName: 'Salon',
       ),
-      SizedBox(width: 10,),
+      ]
+       ),
+
+      SizedBox(height: 10,),
+      Row(
+        children:[
+          SizedBox(width: 10,),
       CategoryItem(
         imageName: 'painter',
         categoryName: 'Painter',
@@ -87,15 +98,16 @@ class CategoryView extends GetView<CategoryController> {
         categoryName: 'Laundry',
 
       ),
-      SizedBox(width: 10,),
-      CategoryItem(
-        imageName: 'electrician',
-        categoryName: 'Electrician',
-      ),
 
-    ],
+      ]
     ),
-    );
+
+
+      ]
+    ),
+
+    ));
+
     }
     }
 

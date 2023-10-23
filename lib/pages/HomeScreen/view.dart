@@ -238,7 +238,7 @@ class HomeScreen extends GetView<HomeController> {
                                       serviceLable: "Deep Cleaning",
                                     ),
                                             ServiceContainer(
-                                              imageUrl:'assets/images/cooking.png',
+                                              imageUrl:'assets/images/featured cooking.png',
                                               price: 50.0,
                                               feedbackStars: 4,
                                               serviceName: "House Hold Cook",

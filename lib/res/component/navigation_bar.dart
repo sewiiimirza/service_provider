@@ -1,11 +1,11 @@
 
 import 'package:e_services/pages/BookingScreen/booking.dart';
 import 'package:e_services/pages/CategoryScreen/category.dart';
-import 'package:e_services/pages/ChatScreen/chat.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/pages/ProfileScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../pages/ScheduleScreen/schedule.dart';
 import '../colors/color.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -18,14 +18,14 @@ class NavigationMenu extends StatelessWidget {
       BottomNavigationBarItem(icon: Image.asset("assets/icons/home.png",width:50,height: 40,),label: "Home",),
       BottomNavigationBarItem(icon: Image.asset("assets/icons/bookings.png",width:50,height: 40,),label: "Bookings",),
       BottomNavigationBarItem(icon: Image.asset("assets/icons/categories.png",width:50,height: 40,),label: "Categories",),
-      BottomNavigationBarItem(icon: Image.asset("assets/icons/chat.png",width:50,height: 40,),label: "Chat",),
+      BottomNavigationBarItem(icon: Image.asset("assets/icons/chat.png",width:50,height: 40,),label: "Schedule",),
       BottomNavigationBarItem(icon: Image.asset("assets/icons/profile.png",width:50,height: 40,),label: "Profile",),
     ];
     var navBody=[
       HomeScreen(),
       BookingView(),
       CategoryView(),
-      ChatView(),
+      ScheduleView(),
       ProfileView(),
 
 

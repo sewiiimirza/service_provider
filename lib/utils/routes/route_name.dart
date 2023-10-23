@@ -15,8 +15,10 @@ class AppRoutes {
   static const String BookingView= '/booking';
   static const String FeaturedView= '/feature';
   static const String CategogyView= '/category';
-  static const String ChatView= '/chat';
+  static const String ScheduleView= '/schedule';
   static const String ProfileView= '/profile';
+  static const String UpdateProfileScreen= '/update_profile';
+
   static const String ConfirmationScreen= '/confirm';
 
 
