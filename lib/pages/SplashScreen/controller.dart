@@ -13,7 +13,7 @@ class SplashController extends GetxController{
 
 void navigate(){
 
- Future.delayed(const Duration(seconds: 3),()=>Get.offAllNamed(AppRoutes.OnboardingScreen));
+ Future.delayed(const Duration(seconds: 5),()=>Get.offAllNamed(AppRoutes.OnboardingScreen));
   }//used for navigation and routing things
 
 }//now controller and state are called from UI

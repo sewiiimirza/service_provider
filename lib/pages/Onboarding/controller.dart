@@ -26,12 +26,12 @@ class OnboardingController extends GetxController{
 
   }
 skipAction() {
-    if(currentPage!=null) {
-      pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
-    }else
-      Get.offAllNamed(AppRoutes.WelcomeScreen);
-     // pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
-
+    // if(currentPage!=null) {
+    //   pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
+    // }else
+    //   Get.offAllNamed(AppRoutes.WelcomeScreen);
+    //  // pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
+Get.offAllNamed(AppRoutes.WelcomeScreen);
  }
 
  List<OnboardingPages>pages=[

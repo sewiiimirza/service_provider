@@ -111,8 +111,8 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                 obsecure:true,
                 keyboardType: TextInputType.emailAddress,
                 // icon: Icons.email_outlined,
-                contr: signupcontroller.state.signUpEmailController,
-                focNode: signupcontroller.state.signUpEmailFocus,
+                contr: signupcontroller.state.signUpPasswordController,
+                focNode: signupcontroller.state.signUpPasswordFocus,
 
                  decoration:InputDecoration(
                    hintText: ' Enter your password',

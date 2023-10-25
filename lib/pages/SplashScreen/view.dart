@@ -10,6 +10,7 @@ class SplashScreenView extends GetView<SplashController>{
   Widget build(BuildContext context) {
     controller.navigate();
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,12 +36,14 @@ class SplashScreenView extends GetView<SplashController>{
             AnimatedTextKit(
                   animatedTexts: [
                     RotateAnimatedText("Services",
+                    duration: Duration(seconds: 1),
                     textAlign: TextAlign.start,
                       textStyle: TextStyle(
                           color: AppColors.primaryTextColor,
                           fontSize: 50,
                           fontWeight: FontWeight.bold),),
                     RotateAnimatedText("Home_Services",
+                      duration: Duration(seconds: 1),
                       textStyle: TextStyle(color: AppColors.primaryTextColor,
                           fontSize: 50,
                           fontWeight: FontWeight.bold),
