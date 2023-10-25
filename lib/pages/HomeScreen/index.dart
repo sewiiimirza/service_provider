@@ -1,4 +1,4 @@
-library  Home;//write index nd its path also
+library  Home;
 export './states.dart';
 export './controller.dart';
 export './bindings.dart';
