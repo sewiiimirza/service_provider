@@ -9,7 +9,12 @@ class ScheduleView extends GetView<ScheduleController> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      child: Center(child: Text("Shedule Screen")),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(child: Text("Shedule Screen")),
+        ],
+      ),
     );
   }
 }
