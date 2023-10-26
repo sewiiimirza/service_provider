@@ -77,7 +77,7 @@ class HomeScreen extends GetView<HomeController> {
                                               OutlinedButton(onPressed:(){
                                                 Get.toNamed(AppRoutes.CategogyView);
                                               },
-                                                child: Text('ViewAll',style: TextStyle(fontSize: 25,
+                                                child: Text('ViewAll',style: TextStyle(fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                   color: AppColors.secondaryColor,
                                                 ),),),
@@ -206,7 +206,7 @@ class HomeScreen extends GetView<HomeController> {
                                    OutlinedButton(onPressed:(){
                                      Get.toNamed(AppRoutes.FeaturedView);
                                    },
-                                     child: Text('ViewAll',style: TextStyle(fontSize: 25,
+                                     child: Text('ViewAll',style: TextStyle(fontSize: 20,
                                        fontWeight: FontWeight.bold,
                                        color: AppColors.secondaryColor,
                                      ),),),

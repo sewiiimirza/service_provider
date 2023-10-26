@@ -8,7 +8,9 @@ class ScheduleView extends GetView<ScheduleController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Container(
+      child: Center(child: Text("Shedule Screen")),
+    );
   }
 }
 

@@ -11,17 +11,6 @@
         android:label=" e_services"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB4D0KEJj9ajCw5yIPq4QKnbYDSb4cc1xU" />
-<!--        For iOS, add your API key to Info.plist.-->
-<!--        xml-->
-<!--        Copy code-->
-<!--        <key>io.flutter.embedded_views_preview</key>-->
-<!--        <string>YES</string>-->
-<!--        <key>GoogleMapsApiKey</key>-->
-<!--        <string>YOUR_API_KEY_HERE</string>-->
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -34,6 +23,7 @@
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
                  to determine the Window background behind the Flutter UI. -->
+
             <meta-data
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
@@ -48,5 +38,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB4D0KEJj9ajCw5yIPq4QKnbYDSb4cc1xU" />
     </application>
 </manifest>

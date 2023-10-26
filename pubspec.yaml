@@ -77,49 +77,44 @@ flutter:
 
   # To add assets to your application, add an assets section, like this://assets:
   assets:
-    - assets/images/splash.png
-    - assets/images/onboarding1.png
-    - assets/images/onboarding2.png
-    - assets/images/onboarding3.png
-    - assets/images/welcome.png
-    - assets/images/login.png
-    - assets/images/signup.png
-    - assets/images/sp_signup.png
-    - assets/images/sp_login.png
-    - assets/images/featured cleaning.png
-    - assets/images/featured plumber.png
-    - assets/images/featured electrician.png
-    - assets/images/featured carpenter.png
-    - assets/images/featured repair.png
-    - assets/images/featured cooking.png
-    - assets/images/featured painter.png
-    - assets/images/featured salon.png
-    - assets/images/featured laundry.png
-    - assets/images/featured smart_device.png
-    - assets/images/service_provider1.png
-    - assets/images/service_provider2.png
-    - assets/images/service_provider3.png
-    - assets/icons/home.png
-    - assets/icons/smartphone.png
-    - assets/icons/bookings.png
-    - assets/icons/categories.png
-    - assets/icons/chat.png
-    - assets/icons/profile.png
-    - assets/icons/plumber.png
-    - assets/icons/electrician.png
-    - assets/icons/cleaning.png
-    - assets/icons/carpenter.png
-    - assets/icons/chef.png
-    - assets/icons/salon.png
-    - assets/icons/repair.png
-    - assets/icons/laundry.png
-    -
-    -
-    -
-    -
-    -
-    -
-    -
+    - assets/icons/
+    - assets/images/
+#    - assets/images/splash.png
+#    - assets/images/onboarding1.png
+#    - assets/images/onboarding2.png
+#    - assets/images/onboarding3.png
+#    - assets/images/welcome.png
+#    - assets/images/login.png
+#    - assets/images/signup.png
+#    - assets/images/sp_signup.png
+#    - assets/images/sp_login.png
+#    - assets/images/featured cleaning.png
+#    - assets/images/featured plumber.png
+#    - assets/images/featured electrician.png
+#    - assets/images/featured carpenter.png
+#    - assets/images/featured repair.png
+#    - assets/images/featured cooking.png
+#    - assets/images/featured painter.png
+#    - assets/images/featured salon.png
+#    - assets/images/featured laundry.png
+#    - assets/images/featured smart_device.png
+#    - assets/images/service_provider1.png
+#    - assets/images/service_provider2.png
+#    - assets/images/service_provider3.png
+#    - assets/icons/home.png
+#    - assets/icons/smartphone.png
+#    - assets/icons/bookings.png
+#    - assets/icons/categories.png
+#    - assets/icons/chat.png
+#    - assets/icons/profile.png
+#    - assets/icons/plumber.png
+#    - assets/icons/electrician.png
+#    - assets/icons/cleaning.png
+#    - assets/icons/carpenter.png
+#    - assets/icons/chef.png
+#    - assets/icons/salon.png
+#    - assets/icons/repair.png
+#    - assets/icons/laundry.png
 
 
 
