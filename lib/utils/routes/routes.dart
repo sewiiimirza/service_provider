@@ -2,8 +2,8 @@
 
 
 import 'package:e_services/pages/BookingScreen/booking.dart';
+import 'package:e_services/pages/BookingScreen/successful.dart';
 import 'package:e_services/pages/CategoryScreen/category.dart';
-import 'package:e_services/pages/ConfirmationScreen/confirmation.dart';
 import 'package:e_services/pages/FeaturedScreen/featured.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/pages/ProfileScreen/update_screen.dart';
@@ -15,6 +15,8 @@ import 'package:e_services/pages/SignUp_LoginPage/pages/service_provider_forget_
 import 'package:e_services/pages/SignUp_LoginPage/pages/service_provider_login.dart';
 
 import 'package:e_services/pages/Welcome/view.dart';
+import 'package:e_services/res/component/date_time_picker.dart';
+import 'package:e_services/res/component/location.dart';
 import 'package:e_services/res/component/navigation_bar.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/cupertino.dart';
@@ -113,6 +115,18 @@ class AppPages {
     GetPage(name: AppRoutes.ScheduleView,
       page: () => ScheduleView(),
     //  binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.DateTimePickerScreen,
+      page: () => DateTimePickerScreen(),
+      //  binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.LocationPickerScreen,
+      page: () => LocationPickerScreen(),
+      //  binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.SuccessfulView,
+      page: () => SuccessfulView(),
+      //  binding:HomeBinding(),
     ),
     GetPage(name: AppRoutes.ProfileView,
       page: () => ProfileView(),

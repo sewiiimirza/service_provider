@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../utils/routes/route_name.dart';
 import 'controller.dart';
 class ScheduleView extends GetView<ScheduleController> {
   ScheduleView({super.key});
@@ -10,14 +11,35 @@ class ScheduleView extends GetView<ScheduleController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-        body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(child: Text("Schedule Screen")),
-            ],
-          ),
-        ));
+      appBar: AppBar(
+        title: Text('Schedule Service'),
+      ),
+      body:SafeArea(
+     child:Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(AppRoutes.DateTimePickerScreen);
+              },
+              child: Text('Select Date and Time'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(AppRoutes.LocationPickerScreen);
+              },
+              child: Text('Select Location on Map'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(AppRoutes.SuccessfulView);
+              },
+              child: Text("Confirm "),
+            ),
+          ],
+        ),
+      ),
+    ));
   }
 }

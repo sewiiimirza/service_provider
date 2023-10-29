@@ -16,6 +16,9 @@ class AppRoutes {
   static const String FeaturedView= '/feature';
   static const String CategoryView= '/category';
   static const String ScheduleView= '/schedule';
+  static const String DateTimePickerScreen= '/date/time';
+  static const String LocationPickerScreen= '/location';
+  static const String SuccessfulView= '/successful';
   static const String ProfileView= '/profile';
   static const String UpdateProfileScreen= '/update_profile';
 
