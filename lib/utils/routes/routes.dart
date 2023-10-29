@@ -25,7 +25,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../pages/Onboarding/bindings.dart';
 import '../../pages/Onboarding/view.dart';
 
-import '../../pages/ScheduleScreen/schedule.dart';
+import '../../pages/ScheduleScreen/view.dart';
 import '../../pages/SignUp_LoginPage/pages/service_provider_signUp.dart';
 import '../../pages/SignUp_LoginPage/pages/customer_signupview.dart';
 import '../../pages/SignUp_LoginPage/login_page.dart';
@@ -98,21 +98,17 @@ class AppPages {
       page: () => HomeScreen(),
       binding:HomeBinding(),
     ),
-    GetPage(name: AppRoutes.BookingView,
-      page: () => BookingView(),
-    //  binding:HomeBinding(),
-    ),
     GetPage(name: AppRoutes.FeaturedView,
       page: () => FeaturedView(),
       // binding:HomeBinding(),
     ),
-    // GetPage(name: AppRoutes.ConfirmationScreen,
-    //   page: () => ConfirmationScreen(),
-    //   // binding:HomeBinding(),
-    // ),
-    GetPage(name: AppRoutes.CategogyView,
+    GetPage(name: AppRoutes.CategoryView,
       page: () => CategoryView(),
      // binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.BookingView,
+      page: () => BookingView(),
+      //  binding:HomeBinding(),
     ),
     GetPage(name: AppRoutes.ScheduleView,
       page: () => ScheduleView(),

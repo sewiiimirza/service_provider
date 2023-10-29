@@ -14,12 +14,11 @@ class AppRoutes {
   static const String HomeScreen= '/home';
   static const String BookingView= '/booking';
   static const String FeaturedView= '/feature';
-  static const String CategogyView= '/category';
+  static const String CategoryView= '/category';
   static const String ScheduleView= '/schedule';
   static const String ProfileView= '/profile';
   static const String UpdateProfileScreen= '/update_profile';
 
-  static const String ConfirmationScreen= '/confirm';
 
 
 }

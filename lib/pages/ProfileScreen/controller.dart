@@ -6,6 +6,8 @@ class ProfileController extends GetxController {
 }
  class UpdateProfileController extends GetxController {
 
+  // RxString name = 'John Doe'.obs;
+  // RxString profilePicturePath = ''.obs;
  }
 //   final ImageSelectionService imageSelectionService = ImageSelectionService();
 //

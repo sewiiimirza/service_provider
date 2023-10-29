@@ -5,7 +5,7 @@ import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/pages/ProfileScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../pages/ScheduleScreen/schedule.dart';
+import '../../pages/ScheduleScreen/view.dart';
 import '../colors/color.dart';
 
 class NavigationMenu extends StatelessWidget {

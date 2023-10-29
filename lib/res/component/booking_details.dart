@@ -142,7 +142,7 @@ class BookingDetail extends StatelessWidget {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              Get.toNamed(AppRoutes.ConfirmationScreen);
+            Get.toNamed(AppRoutes.ScheduleView);
             },
             child: Text('Book Now'),
           ),
