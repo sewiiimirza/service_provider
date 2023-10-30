@@ -1,3 +1,5 @@
+import 'package:e_services/res/component/confirm_person_data.dart';
+import 'package:e_services/res/component/round_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,27 +17,46 @@ class ScheduleView extends GetView<ScheduleController> {
         title: Text('Schedule Service'),
       ),
       body:SafeArea(
-     child:Center(
-        child: Column(
+     child:SingleChildScrollView(
+         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed(AppRoutes.DateTimePickerScreen);
-              },
-              child: Text('Select Date and Time'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed(AppRoutes.LocationPickerScreen);
-              },
-              child: Text('Select Location on Map'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed(AppRoutes.SuccessfulView);
-              },
-              child: Text("Confirm "),
+            PersonData(),
+            SizedBox(height: 10,),
+           // RoundButton(title: "Select Date and time",
+           //     onPress:()=>  Get.toNamed(AppRoutes.DateTimePickerScreen),
+           // ) ElevatedButton(
+           //    onPressed: () {
+           //
+           //    },
+           //    child: Text('Select Date and Time'),
+          //  ),
+            SizedBox(height:10,),
+       Container(height: 50,
+       width: 400,
+       decoration: BoxDecoration(
+         borderRadius: BorderRadius.circular(200),
+       ),
+       child: RoundButton(title: "Select Location on Map",
+           onPress:()=>  Get.toNamed(AppRoutes.LocationPickerScreen),
+         ),
+       ),
+
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Get.toNamed(AppRoutes.LocationPickerScreen);
+            //   },
+            //   child: Text('Select Location on Map'),
+
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Get.toNamed(AppRoutes.SuccessfulView);
+            //   },
+            //   child: Text("Confirm "),
+            SizedBox(height: 30,),
+            RoundButton(title: "Confirm ",
+              onPress:()=>  Get.toNamed(AppRoutes.SuccessfulView),
+
             ),
           ],
         ),

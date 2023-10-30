@@ -11,6 +11,17 @@ class SuccessfulView extends GetView<SuccessfulController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Booking Successfully',
+          style: TextStyle(fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color:Colors.white ,
+          ),
+        ),
+        backgroundColor:AppColors.primaryColor,
+        //  elevation: 0,
+
+      ),
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
@@ -20,18 +31,20 @@ class SuccessfulView extends GetView<SuccessfulController> {
             ),
             SizedBox(height: 10,),
             Container(
-              height: 100,
+              height: 150,
               width: double.infinity,
               child: Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 //  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(' Booking Successfully',
-                      style: TextStyle(
-                        // color: AppColors.secondaryTextColor,
-                          color: AppColors.primaryColor,
-                          fontSize: 80,
-                          fontWeight: FontWeight.w700),),
+                    Center(
+                      child: const Text(' Booking \n Successfully',
+                        style: TextStyle(
+                          // color: AppColors.secondaryTextColor,
+                            color: AppColors.primaryColor,
+                            fontSize: 50,
+                            fontWeight: FontWeight.w700),),
+                    ),
                   ]
               ),
             ),
