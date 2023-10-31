@@ -40,7 +40,7 @@
 //             ),
 //             ElevatedButton(
 //               onPressed: () {
-//                 // Implement logic to confirm the selected date and time.
+//
 //                 Get.toNamed('/confirmation_screen');
 //               },
 //               child: Text('Confirm Date and Time'),

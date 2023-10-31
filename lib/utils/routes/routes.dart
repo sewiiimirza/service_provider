@@ -24,6 +24,7 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 
+import '../../pages/HomeScreen/drawer_screen.dart';
 import '../../pages/Onboarding/bindings.dart';
 import '../../pages/Onboarding/view.dart';
 
@@ -135,6 +136,10 @@ class AppPages {
     GetPage(name: AppRoutes.UpdateProfileScreen,
       page: () => UpdateProfileScreen(),
       // binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.DrawerScreen,
+      page: () => DrawerScreen(),
+      //  binding:HomeBinding(),
     ),
 
 

@@ -19,11 +19,6 @@ class HomeScreen extends GetView<HomeController> {
     return Scaffold(
       backgroundColor: Colors.white,
          appBar: AppBar(
-             leading: Icon(
-           Icons.menu,
-           color: Colors.white,
-           size: 40,
-         ),
            title: Text('E_Services',
            style: TextStyle(fontSize: 30,
              fontWeight: FontWeight.bold,
@@ -34,8 +29,16 @@ class HomeScreen extends GetView<HomeController> {
            centerTitle: true,
            backgroundColor: AppColors.primaryColor,
           elevation: 0,
-
+           actions :[
+             IconButton(
+           color: Colors.white,
+           icon:Icon(Icons.menu,size: 30,) ,onPressed: () {
+             Get.toNamed(AppRoutes.DrawerScreen);
+             },
          ),
+      ]
+         ),
+
       body: SafeArea(
         child: SingleChildScrollView(
              child: Column(

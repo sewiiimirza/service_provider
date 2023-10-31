@@ -6,6 +6,7 @@ class HomeController extends GetxController {
   final  state = HomeState();
   RxInt currentNavIndex = 0.obs;
 
-
+}
+class DrawerScreenController extends GetxController{
 
 }

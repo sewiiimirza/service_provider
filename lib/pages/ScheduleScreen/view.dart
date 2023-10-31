@@ -3,6 +3,7 @@ import 'package:e_services/res/component/round_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../res/colors/color.dart';
 import '../../utils/routes/route_name.dart';
 import 'controller.dart';
 class ScheduleView extends GetView<ScheduleController> {
@@ -13,9 +14,18 @@ class ScheduleView extends GetView<ScheduleController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Schedule Service'),
-      ),
+        appBar: AppBar(
+          title: Text('Schedule ',
+            style: TextStyle(fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: AppColors.primaryColor,
+          //  elevation: 0,
+
+        ),
+
       body:SafeArea(
      child:SingleChildScrollView(
          child: Column(
