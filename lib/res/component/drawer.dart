@@ -2,18 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../utils/routes/route_name.dart';
-Widget build(BuildContext context) {
+Widget buildDrawer(BuildContext context) {
   return Drawer(
-    child: ListView(
-      children: <Widget>[
-        UserAccountsDrawerHeader(
+      child: Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+  child:Column(
+  mainAxisAlignment: MainAxisAlignment.center, children: [
+  SizedBox(
+  width: 100,
+  height: 100,
+    child:UserAccountsDrawerHeader(
           accountName: Text('John Doe'),
           accountEmail: Text('johndoe@example.com'),
           currentAccountPicture: CircleAvatar(
             backgroundImage: AssetImage('assets/images/service_provider1.png'),
           ),
         ),
-        ListTile(
+
+  ),
+
+
+       ListTile(
           leading: Icon(Icons.home,color: Colors.indigoAccent,),
           title: Text('Home'),
           onTap: () {
@@ -34,7 +43,7 @@ Widget build(BuildContext context) {
            Get.toNamed(AppRoutes.ProfileView);
           },
         ),
-      ],
-    ),
-  );
+  ]
+  ),
+    ));
 }
