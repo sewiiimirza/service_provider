@@ -1,6 +1,7 @@
 
 
 import 'package:e_services/pages/SignUp_LoginPage/signup.dart';
+import 'package:e_services/pages/SignUp_LoginPage/states.dart';
 import 'package:e_services/res/component/round_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +16,13 @@ import '../controller.dart';
 class CustomerSignupView extends GetView<Customer_Signup_Login_Controller>{
   CustomerSignupView({Key? key}): super(key: key);
   final controller=Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
+  final state=SignupLoginState();
+
 
 
   @override
   Widget build(BuildContext context) {
+   final  _formKey =GlobalKey<FormState>();
   //   void Navigate;
     final size=MediaQuery.of(context).size.width;
     return Scaffold(
@@ -61,7 +65,13 @@ class CustomerSignupView extends GetView<Customer_Signup_Login_Controller>{
                                   width: double.infinity,
                                   child: RoundButton(
                                       title: 'Signup', textColor: Colors.white,
-                                      onPress: () {}),),
+                                      onPress: () {
+                                     if(_formKey.currentState!.validate()){
+                                       Customer_Signup_Login_Controller.instance.registerUser(
+                                           controller.state.signUpEmailController.text.trim(), controller.state.signUpPasswordController.text.trim());//trim remove the spaces
+                                     }
+
+                                      }),),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [

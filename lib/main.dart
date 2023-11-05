@@ -1,5 +1,5 @@
 
-import 'package:e_services/pages/Onboarding/index.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/auth_repository.dart';
 import 'package:e_services/pages/SplashScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:e_services/utils/routes/route_name.dart';
@@ -10,7 +10,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp().then((value)=>Get.put(AuthenticationRepository()));
   runApp(const MyApp());
 }
 

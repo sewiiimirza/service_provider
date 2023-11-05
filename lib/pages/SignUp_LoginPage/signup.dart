@@ -12,12 +12,13 @@ import 'controller.dart';
 class SignUp extends GetView<Customer_Signup_Login_Controller> {
   SignUp({Key? key}) : super(key: key);
 
-  final signupcontroller = Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
 @override
   Widget build(BuildContext context) {
+  final controller = Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
+  final _formKey =GlobalKey<FormState>();
   return Form(
-
-      child: Column(
+   key: _formKey,
+    child: Column(
           children: [
             Padding(
                 padding:EdgeInsets.symmetric(horizontal: 10,vertical: 10),
@@ -25,7 +26,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                  textInputAction: TextInputAction.next,
                 obsecure: false,
                 keyboardType: TextInputType.text,
-                 contr: signupcontroller.state.signUpUserController,
+                 contr: controller.state.signUpUserController,
 
                 decoration:InputDecoration(
                    hintText: 'UserName',
@@ -51,8 +52,8 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                   obsecure: false,
                   keyboardType: TextInputType.emailAddress,
                   // icon: Icons.email_outlined,
-                  contr: signupcontroller.state.signUpEmailController,
-                  focNode: signupcontroller.state.signUpEmailFocus,
+                  contr: controller.state.signUpEmailController,
+                  focNode: controller.state.signUpEmailFocus,
                   textInputAction:TextInputAction.next, 
 
                   decoration: InputDecoration(
@@ -85,7 +86,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                  textInputAction: TextInputAction.next,
                 obsecure: false,
                 keyboardType: TextInputType.emailAddress,
-                contr:signupcontroller.state.signUpPhoneController,
+                contr:controller.state.signUpPhoneController,
                 decoration: InputDecoration(
                   hintText:   ' #Enter your PhoneNo',
                   hintStyle:TextStyle(fontSize: 25,
@@ -111,8 +112,8 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                 obsecure:true,
                 keyboardType: TextInputType.emailAddress,
                 // icon: Icons.email_outlined,
-                contr: signupcontroller.state.signUpPasswordController,
-                focNode: signupcontroller.state.signUpPasswordFocus,
+                contr: controller.state.signUpPasswordController,
+                focNode: controller.state.signUpPasswordFocus,
 
                  decoration:InputDecoration(
                    hintText: ' Enter your password',
@@ -121,10 +122,10 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                        color: AppColors.primaryColor,),
                      suffixIcon: GestureDetector(
                      onTap: () {
-                     signupcontroller.togglePasswordVisibility();
+                     controller.togglePasswordVisibility();
                         },
                 child: Icon(
-                 signupcontroller.obsecure.value ? Icons.visibility : Icons.visibility_off,size: 30,),
+                 controller.obsecure.value ? Icons.visibility : Icons.visibility_off,size: 30,),
   ),
                      border: OutlineInputBorder(
                        borderSide: BorderSide(

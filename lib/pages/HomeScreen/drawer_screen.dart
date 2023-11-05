@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../res/colors/color.dart';
-import '../../res/component/drawer.dart';
 import 'controller.dart';
-
 
 class DrawerScreen extends GetView<DrawerScreenController> {
   DrawerScreen({Key? key}) : super(key: key);
   final controller = Get.put<DrawerScreenController>(DrawerScreenController());
-
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +23,13 @@ class DrawerScreen extends GetView<DrawerScreenController> {
         ),
         body: SafeArea(
           child: SingleChildScrollView(
-          child: Container(
-       padding: EdgeInsets.symmetric(horizontal:20 , vertical: 20),
-          child:Column(
-            children:[
-              buildDrawer(context),
-            ]
+          child:Drawer(),
+
           ),
 
           ),
 
-        ),
-    ));
+        );
   }
 
 }

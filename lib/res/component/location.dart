@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../pages/ScheduleScreen/controller.dart';
+import '../colors/color.dart';
 
 class LocationPickerScreen extends StatelessWidget {
   final controller = Get.put<ScheduleController>(ScheduleController());
@@ -12,8 +13,16 @@ class LocationPickerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select Location on Map'),
+        title: Text('Select Location on Map',
+        style: TextStyle(fontSize: 25,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
       ),
+      backgroundColor: AppColors.primaryColor,
+      //  elevation: 0,
+
+    ),
       body: GoogleMap(
         onMapCreated: (controller) {
           _mapController = controller;
