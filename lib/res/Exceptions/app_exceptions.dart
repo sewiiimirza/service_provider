@@ -1,12 +1,12 @@
 class appExceptions implements Exception {
 
-  final _message;
-  final _prefix;
+  final message;
+  final prefix;
 
-  appExceptions([this._message, this._prefix]);
+  appExceptions([this.message, this.prefix]);
 
   String toString() {
-    return '$_prefix,$_message';
+    return '$prefix,$message';
   }
 }
 
@@ -29,6 +29,7 @@ class FetchDataException extends appExceptions {
   FetchDataException([String? message ]) : super(message, '');
 }
 class SignUp_LoginException extends appExceptions {
+
  SignUp_LoginException([String? message ]) : super(message, 'An unknown error occurred');
  //we have to call e code exception  so for that we create factory constructor
 factory SignUp_LoginException.code(String code){

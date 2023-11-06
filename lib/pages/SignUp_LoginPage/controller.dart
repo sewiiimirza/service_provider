@@ -1,5 +1,6 @@
 
 
+import 'package:e_services/pages/SignUp_LoginPage/pages/auth_repository.dart';
 import 'package:e_services/pages/SignUp_LoginPage/states.dart';
 import 'package:e_services/res/component/sign_up_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
@@ -22,6 +23,7 @@ class Customer_Signup_Login_Controller extends GetxController {
   // final phoneNo=TextEditingController();
  // call this function from design &it will do the rest
   void registerUser(String email,String password){
+    AuthenticationRepository.instance.createUserWithEmailAndPassword(email, password);
 
   }
  var obsecure=true.obs;
