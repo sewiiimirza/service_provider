@@ -26,8 +26,7 @@ class SignUp extends GetView<Customer_Signup_Login_Controller> {
                  textInputAction: TextInputAction.next,
                 obsecure: false,
                 keyboardType: TextInputType.text,
-                 contr: controller.state.signUpUserController,
-
+                 contr: controller.state.signUpNameController,
                 decoration:InputDecoration(
                    hintText: 'UserName',
                   hintStyle:TextStyle(fontSize: 25,color:Colors.grey,),

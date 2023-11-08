@@ -1,4 +1,5 @@
 import 'package:e_services/pages/SignUp_LoginPage/controller.dart';
+import 'package:e_services/res/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -10,11 +11,9 @@ import '../../../res/component/sign_up_image.png.dart';
 import '../../../utils/routes/route_name.dart';
 import '../signup.dart';
 
-class ServiceProviderSignUp extends GetView<Provider_Signup_Login_Controller> {
+class ServiceProviderSignUp extends GetView<Customer_Signup_Login_Controller> {
   ServiceProviderSignUp({Key? key}) : super(key: key);
 
-  final pcontroller = Get.put<Provider_Signup_Login_Controller>(
-      Provider_Signup_Login_Controller());
   @override
   Widget build(BuildContext context) {
     //   void Navigate;
@@ -64,7 +63,7 @@ class ServiceProviderSignUp extends GetView<Provider_Signup_Login_Controller> {
                             title: 'Signup',
                             textColor: Colors.white,
                             onPress: () {
-                              Get.toNamed(AppRoutes.Service_P_UpScreen);
+
                             },
                           ),
                         ),
@@ -81,7 +80,7 @@ class ServiceProviderSignUp extends GetView<Provider_Signup_Login_Controller> {
                             ),
                             TextButton(
                               onPressed: () {
-                                Get.offAllNamed(AppRoutes.SP_Login_Screen);
+                                Get.to(AppRoutes.SP_Login_Screen);
                               },
                               child: Text(
                                 'Login',

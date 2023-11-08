@@ -3,6 +3,7 @@
 import 'package:e_services/pages/SignUp_LoginPage/signup.dart';
 import 'package:e_services/pages/SignUp_LoginPage/states.dart';
 import 'package:e_services/res/component/round_button.dart';
+import 'package:e_services/res/models/user_model.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,10 +16,6 @@ import '../controller.dart';
 
 class CustomerSignupView extends GetView<Customer_Signup_Login_Controller>{
   CustomerSignupView({Key? key}): super(key: key);
-  final controller=Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
-  final state=SignupLoginState();
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +64,14 @@ class CustomerSignupView extends GetView<Customer_Signup_Login_Controller>{
                                       title: 'Signup', textColor: Colors.white,
                                       onPress: () {
                                      if(_formKey.currentState!.validate()){
-                                       Customer_Signup_Login_Controller.instance.registerUser(
-                                           controller.state.signUpEmailController.text.trim(), controller.state.signUpPasswordController.text.trim());//trim remove the spaces
+                                       UserModel user = UserModel(
+                                         userName: controller.state.signUpNameController.text.trim().toString(),
+                                         phone: controller.state.signUpPhoneController.text.trim().toString(),
+                                         email: controller.state.signUpEmailController.text.trim().toString(),
+                                       );
+                                       String email = controller.state.signUpEmailController.text.trim().toString();
+                                       String password = controller.state.signUpPasswordController.text.trim().toString();
+                                       controller.registerUser(email, password,user);//trim remove the spaces
                                      }
 
                                       }),),
