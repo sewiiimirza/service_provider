@@ -6,8 +6,8 @@ class NavigationDrawer extends StatelessWidget {
     Widget build(BuildContext context){
       return Drawer(
       child:Container(
-        height: 200,
-         width: 300,
+        height: 500,
+         width: 70,
          color: Colors.blue,
          child: ListView(
               children:[

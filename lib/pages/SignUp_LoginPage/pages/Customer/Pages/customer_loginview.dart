@@ -1,17 +1,18 @@
-import 'package:e_services/pages/SignUp_LoginPage/login_page.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Session_widgets/login_page.dart';
 import 'package:e_services/res/component/login_image.dart';
 import 'package:e_services/res/component/round_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../res/colors/color.dart';
+import '../../../../../res/colors/color.dart';
 
-import '../controller.dart';
+import '../Controllers/login_contr.dart';
+import '../Controllers/sign_up_contr.dart';
 
-class CustomerLoginView extends GetView<Customer_Signup_Login_Controller> {
+class CustomerLoginView extends GetView<Customer_Login_Controller> {
   CustomerLoginView({Key? key}) : super(key: key);
-  final controller = Get.put<Customer_Signup_Login_Controller>(
-      Customer_Signup_Login_Controller());
+  final controller = Get.put<Customer_Login_Controller>(
+      Customer_Login_Controller());
 
   @override
   Widget build(BuildContext context) {

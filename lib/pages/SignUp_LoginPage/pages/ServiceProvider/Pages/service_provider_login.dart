@@ -1,18 +1,17 @@
-import 'package:e_services/pages/SignUp_LoginPage/login_page.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Session_widgets/login_page.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/Controllers/sign_up_contr.dart';
 import 'package:e_services/res/component/login_image.dart';
 import 'package:e_services/res/component/round_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import '../../../res/colors/color.dart';
+import '../../../../../res/colors/color.dart';
+import '../Controllers/login_contr.dart';
 
-import '../controller.dart';
-
-class Service_ProviderLoginView extends GetView<Provider_Signup_Login_Controller> {
+class Service_ProviderLoginView extends GetView<Provider_Login_Controller> {
   Service_ProviderLoginView({Key? key}) : super(key: key);
-  final controller = Get.put<Provider_Signup_Login_Controller>(
-      Provider_Signup_Login_Controller());
+  final controller = Get.put<Provider_Login_Controller>(
+      Provider_Login_Controller());
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +59,7 @@ class Service_ProviderLoginView extends GetView<Provider_Signup_Login_Controller
                               title: 'Login',
                               textColor: Colors.white,
                               onPress: () {
-                                Get.toNamed(AppRoutes.SP_Login_Screen);
+                                Get.toNamed(AppRoutes.HomeScreen);
                               }),
                         ),
                         Row(

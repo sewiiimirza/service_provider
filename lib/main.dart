@@ -1,5 +1,5 @@
 
-import 'package:e_services/pages/SignUp_LoginPage/pages/auth_repository.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/cus_auth_repository.dart';
 import 'package:e_services/pages/SplashScreen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:e_services/utils/routes/route_name.dart';

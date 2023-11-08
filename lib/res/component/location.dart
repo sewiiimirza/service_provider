@@ -70,7 +70,7 @@ class LocationPickerScreen extends StatelessWidget {
 // }import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
-// import '../../pages/ScheduleScreen/controller.dart';
+// import '../../pages/ScheduleScreen/sign_up_contr.dart';
 //
 // class LocationPickerScreen extends StatelessWidget {
 //   final controller = Get.put<ScheduleController>(ScheduleController());

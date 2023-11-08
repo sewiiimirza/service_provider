@@ -31,10 +31,10 @@ class SuccessfulView extends GetView<SuccessfulController> {
             ),
             SizedBox(height: 10,),
             Container(
-              height: 150,
+              height: 120,
               width: double.infinity,
               child: Row(
-                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 //  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Center(
@@ -42,7 +42,7 @@ class SuccessfulView extends GetView<SuccessfulController> {
                         style: TextStyle(
                           // color: AppColors.secondaryTextColor,
                             color: AppColors.primaryColor,
-                            fontSize: 50,
+                            fontSize: 40,
                             fontWeight: FontWeight.w700),),
                     ),
                   ]

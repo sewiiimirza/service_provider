@@ -1,18 +1,21 @@
 
-import 'package:e_services/pages/SignUp_LoginPage/forget_password.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Session_widgets/forget_password.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/Controllers/forget_controller.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/Controllers/sign_up_contr.dart';
 import 'package:e_services/res/component/round_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../res/colors/color.dart';
-import '../../../res/component/sign_up_image.png.dart';
+import '../../../../../res/colors/color.dart';
+import '../../../../../res/component/sign_up_image.png.dart';
 
-import '../controller.dart';
+import '../../Customer/Controllers/forg_controller.dart';
+import '../../Customer/Controllers/sign_up_contr.dart';
 
 
-class SP_Forget_Password extends GetView<Provider_Signup_Login_Controller>{
+class SP_Forget_Password extends GetView<Forget_SP_Controller>{
   SP_Forget_Password({Key? key}): super(key: key);
-  final controller=Get.put<Provider_Signup_Login_Controller>(Provider_Signup_Login_Controller());
+  final controller=Get.put<Forget_SP_Controller>(Forget_SP_Controller());
 
 
   @override

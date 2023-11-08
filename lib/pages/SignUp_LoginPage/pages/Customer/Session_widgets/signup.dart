@@ -1,20 +1,21 @@
 
 
 
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Controllers/forg_controller.dart';
 import 'package:e_services/res/component/input_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../res/colors/color.dart';
-import 'controller.dart';
+import '../../../../../res/colors/color.dart';
+import '../Controllers/sign_up_contr.dart';
 
 
-class SignUp extends GetView<Customer_Signup_Login_Controller> {
+class SignUp extends GetView<Customer_Signup_Controller> {
   SignUp({Key? key}) : super(key: key);
 
 @override
   Widget build(BuildContext context) {
-  final controller = Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
+  final controller = Get.put<Customer_Signup_Controller>(Customer_Signup_Controller());
   final _formKey =GlobalKey<FormState>();
   return Form(
    key: _formKey,

@@ -22,12 +22,11 @@ class DrawerScreen extends GetView<DrawerScreenController> {
 
         ),
         body: SafeArea(
-          child: SingleChildScrollView(
           child:Drawer(),
 
           ),
 
-          ),
+
 
         );
   }

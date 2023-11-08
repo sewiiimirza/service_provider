@@ -1,17 +1,17 @@
 
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Controllers/login_contr.dart';
 import 'package:e_services/res/component/input_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import '../../res/colors/color.dart';
-import 'controller.dart';
 
-class LoginPage extends GetView<Customer_Signup_Login_Controller> {
+import '../../../../../res/colors/color.dart';
+
+
+class LoginPage extends GetView<Customer_Login_Controller> {
   LoginPage({Key? key}) : super(key: key);
 
-  final controller = Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
+  final controller = Get.put<Customer_Login_Controller>(Customer_Login_Controller());
 
   @override
   Widget build(BuildContext context) {

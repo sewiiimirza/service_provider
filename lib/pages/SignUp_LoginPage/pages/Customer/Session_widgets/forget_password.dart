@@ -1,15 +1,16 @@
 
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Controllers/forg_controller.dart';
 import 'package:e_services/res/component/input_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../res/colors/color.dart';
-import 'controller.dart';
+import '../../../../../res/colors/color.dart';
+import '../Controllers/sign_up_contr.dart';
 
-class ForgetPassword extends GetView<Customer_Signup_Login_Controller> {
+class ForgetPassword extends GetView<ForgetController> {
   ForgetPassword({Key? key}) : super(key: key);
 
-  final controller = Get.put<Customer_Signup_Login_Controller>(Customer_Signup_Login_Controller());
+  final controller = Get.put<ForgetController>(ForgetController());
 
   @override
   Widget build(BuildContext context) {

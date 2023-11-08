@@ -1,17 +1,18 @@
-import 'package:e_services/pages/SignUp_LoginPage/controller.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Controllers/sign_up_contr.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/Controllers/sign_up_contr.dart';
 import 'package:e_services/res/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import '../../../res/colors/color.dart';
-import '../../../res/component/round_button.dart';
-import '../../../res/component/sign_up_image.png.dart';
-import '../../../utils/routes/route_name.dart';
-import '../signup.dart';
+import '../../../../../res/colors/color.dart';
+import '../../../../../res/component/round_button.dart';
+import '../../../../../res/component/sign_up_image.png.dart';
+import '../../../../../utils/routes/route_name.dart';
+import '../../Customer/Session_widgets/signup.dart';
 
-class ServiceProviderSignUp extends GetView<Customer_Signup_Login_Controller> {
+class ServiceProviderSignUp extends GetView<Provider_Signup_Controller> {
   ServiceProviderSignUp({Key? key}) : super(key: key);
 
   @override
@@ -80,7 +81,7 @@ class ServiceProviderSignUp extends GetView<Customer_Signup_Login_Controller> {
                             ),
                             TextButton(
                               onPressed: () {
-                                Get.to(AppRoutes.SP_Login_Screen);
+                                Get.toNamed(AppRoutes.SP_Login_Screen);
                               },
                               child: Text(
                                 'Login',

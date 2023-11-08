@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 
 class SignupLoginState{
   // controllers for login
@@ -22,3 +23,17 @@ class SignupLoginState{
   final signUpPasswordFocus = FocusNode();
   final signUpUserFocus = FocusNode();
 }
+
+
+class ForgetState {
+  // focus nodes for login
+  final loginEmailFocus = FocusNode();
+  final loginPasswordFocus = FocusNode();
+// controllers for login
+  final loginEmailController = TextEditingController();
+  final loginPasswordController = TextEditingController();
+
+
+  }
+
+
