@@ -15,46 +15,51 @@ class SplashScreenView extends GetView<SplashController>{
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(
-            child: Image(image: AssetImage('assets/images/splash.png')),
+          Container(
+            height: 300,
+            width: double.infinity,
+            child: Center(
+              child: Image(image: AssetImage('assets/images/splash.png'),fit: BoxFit.fill,),
+            ),
           ),
           SizedBox(height: 10,),
-          Container(
-            height: 100,
-            width: double.infinity,
-            child: Row(
-              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //  crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-            const  Text('E',
-                  textDirection: TextDirection.ltr,
-                  style: TextStyle(
-                    // color: AppColors.secondaryTextColor,
-                    color: Colors.black,
-                      fontSize: 80,
-                  fontWeight: FontWeight.w700)),
-            AnimatedTextKit(
-                  animatedTexts: [
-                    RotateAnimatedText("Services",
-                    duration: Duration(seconds: 1),
-                    textAlign: TextAlign.start,
-                      textStyle: TextStyle(
-                          color: AppColors.primaryTextColor,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold),),
-                    RotateAnimatedText("Home_Services",
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 10),
+            child: Container(
+              height: 100,
+              width: double.infinity,
+              child: Row(
+                  children: [
+              const  Text('E',
+                    textDirection: TextDirection.ltr,
+                    style: TextStyle(
+                      // color: AppColors.secondaryTextColor,
+                      color: Colors.black,
+                        fontSize: 65,
+                    fontWeight: FontWeight.w700)),
+              AnimatedTextKit(
+                    animatedTexts: [
+                      RotateAnimatedText("Services",
                       duration: Duration(seconds: 1),
-                      textStyle: TextStyle(color: AppColors.primaryTextColor,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                  repeatForever: true,
-                ),
+                      textAlign: TextAlign.start,
+                        textStyle: TextStyle(
+                            color: AppColors.primaryTextColor,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold),),
+                      RotateAnimatedText("Home_Services",
+                        duration: Duration(seconds: 1),
+                        textStyle: TextStyle(color: AppColors.primaryTextColor,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                    repeatForever: true,
+                  ),
 
 
     ]
-             ),
+               ),
+            ),
           ),
 ]
     ),

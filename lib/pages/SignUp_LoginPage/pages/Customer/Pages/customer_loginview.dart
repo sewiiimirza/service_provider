@@ -1,6 +1,7 @@
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Session_widgets/login_page.dart';
 import 'package:e_services/res/component/login_image.dart';
 import 'package:e_services/res/component/round_button.dart';
+import 'package:e_services/res/component/snack_bar.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -50,17 +51,27 @@ class CustomerLoginView extends GetView<Customer_Login_Controller> {
                         SizedBox(
                           height: 20,
                         ),
-                        Container(
-                          padding: EdgeInsets.all(5),
-                          height: 70,
-                          width: double.infinity,
-                          child: RoundButton(
-                              title: 'Login',
-                              textColor: Colors.white,
-                              onPress: () {
-                                 Get.toNamed(AppRoutes.NavigationMenu);
-                              }),
-                        ),
+                        Obx((){
+                          return Container(
+                            padding: EdgeInsets.all(5),
+                            height: 70,
+                            width: double.infinity,
+                            child: controller.state.loginLoading.value==true ? Center(child: CircularProgressIndicator()) :
+                            RoundButton(
+                                title: 'Login',
+                                textColor: Colors.white,
+                                onPress: () {
+                                  String email = controller.state.loginEmailController.text.trim().toString();
+                                  String password = controller.state.loginPasswordController.text.trim().toString();
+                                  if(email.isNotEmpty && password.isNotEmpty){
+                                    controller.login(email, password);
+                                  }else{
+                                    Snackbar.showSnackBar("Error", "Enter all fields");
+                                  }
+
+                                }),
+                          );
+                        }),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

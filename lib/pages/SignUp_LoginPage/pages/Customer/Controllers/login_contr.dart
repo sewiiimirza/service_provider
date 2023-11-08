@@ -17,27 +17,27 @@ class Customer_Login_Controller extends GetxController {
   final ref = FirebaseFirestore.instance.collection('customers');
   final auth = FirebaseAuth.instance;
 
+  void setLoginLoading(bool val){
+    state.loginLoading.value = val;
+  }
 
-  Future<void> registerUser(String email, String password,UserModel user) async {
-    String id = DateTime.now().microsecondsSinceEpoch.toString();
+  Future<void> login(String email , String password) async{
+    setLoginLoading(true);
     try{
-
-      await auth.createUserWithEmailAndPassword(email: email, password: password)
-          .then((value) {
-        ref.doc(id).set(user.toJson()).then((value){
-          Snackbar.showSnackBar("Successful", 'Account Created');
-          Get.offAllNamed(AppRoutes.HomeScreen);
-        }).onError((error, stackTrace){
-          Snackbar.showSnackBar("Error", error.toString());
-        });
-      })
-          .onError((error, stackTrace) {
-        Snackbar.showSnackBar("Error", error.toString());
+      await auth.signInWithEmailAndPassword(email: email, password: password).then((value){
+        Get.toNamed(AppRoutes.HomeScreen);
+        setLoginLoading(false);
+      }).onError((error, stackTrace){
+        setLoginLoading(false);
+        Snackbar.showSnackBar('Error', error.toString());
       });
     }catch(e){
-
+      setLoginLoading(false);
+      Snackbar.showSnackBar('Error', e.toString());
     }
   }
+
+
   var obsecure = true.obs;
   void togglePasswordVisibility() {
     obsecure.value = !obsecure.value;

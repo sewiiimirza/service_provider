@@ -2,6 +2,7 @@
 
 import 'package:e_services/pages/HomeScreen/index.dart';
 import 'package:e_services/res/colors/color.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../res/component/service_detail.dart';
@@ -29,13 +30,22 @@ class HomeScreen extends GetView<HomeController> {
            centerTitle: true,
            backgroundColor: AppColors.primaryColor,
           elevation: 0,
+           leading: IconButton(
+             color: Colors.white,
+             icon:Icon(Icons.menu,size: 30,) ,onPressed: () {
+             Get.toNamed(AppRoutes.DrawerScreen);
+           },
+           ),
            actions :[
              IconButton(
-           color: Colors.white,
-           icon:Icon(Icons.menu,size: 30,) ,onPressed: () {
-             Get.toNamed(AppRoutes.DrawerScreen);
+               color: Colors.white,
+               icon:Icon(Icons.logout,size: 30,) ,onPressed: () async{
+                 await FirebaseAuth.instance.signOut().then((value) {
+                   Get.offAllNamed(AppRoutes.WelcomeScreen);
+                 });
+
              },
-         ),
+             ),
       ]
          ),
 
@@ -87,116 +97,119 @@ class HomeScreen extends GetView<HomeController> {
                                             ],
                                           ),
                                          //categories
-                                                 Row(
-                                                     children: [
+                                                 SingleChildScrollView(
+                                                   scrollDirection: Axis.horizontal,
+                                                   child: Row(
+                                                       children: [
                                                Container(
-                                                         width: 90,
-                                                         height: 120,
-                                                         decoration: BoxDecoration(
-                                                           color: AppColors.iconBackgroundColor,
-                                                           borderRadius: BorderRadius.circular(10),
-                                                         ),
-                                                         child:Column(
-                                                           mainAxisAlignment: MainAxisAlignment.center,
-                                                           children:[
-                                                           Image.asset("assets/icons/plumber.png",height: 80,
+                                                           width: 90,
+                                                           height: 120,
+                                                           decoration: BoxDecoration(
+                                                             color: AppColors.iconBackgroundColor,
+                                                             borderRadius: BorderRadius.circular(10),
                                                            ),
-                                                           SizedBox(height: 5),
-                                                           Text(
-                                                             'Plumber',
-                                                             textAlign: TextAlign.center,
-                                                             style: TextStyle(
-                                                               fontSize: 15,
-                                                               fontWeight: FontWeight.w700,
+                                                           child:Column(
+                                                             mainAxisAlignment: MainAxisAlignment.center,
+                                                             children:[
+                                                             Image.asset("assets/icons/plumber.png",height: 80,
                                                              ),
+                                                             SizedBox(height: 5),
+                                                             Text(
+                                                               'Plumber',
+                                                               textAlign: TextAlign.center,
+                                                               style: TextStyle(
+                                                                 fontSize: 15,
+                                                                 fontWeight: FontWeight.w700,
+                                                               ),
+                                                             ),
+                                                           ]
                                                            ),
-                                                         ]
-                                                         ),
-                                                         ),
+                                                           ),
                                                SizedBox(width: 10), // Adjust as needed
                                                Container(
-                                                 width: 90,
-                                                 height: 120,
-                                                 decoration: BoxDecoration(
-                                                   color: AppColors.iconBackgroundColor,
-                                                   borderRadius: BorderRadius.circular(10),
-                                                 ),
-                                                 child: Column(
-                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                   children: [
-                                                     Image.asset(
-                                                       "assets/icons/electrician.png",
-                                                       height: 80,
-                                                     ),
-                                                     SizedBox(height: 5),
-                                                     Text(
-                                                       'Electrician',
-                                                       textAlign: TextAlign.center,
-                                                       style: TextStyle(
-                                                         fontSize: 15,
-                                                         fontWeight: FontWeight.w700,
+                                                   width: 90,
+                                                   height: 120,
+                                                   decoration: BoxDecoration(
+                                                     color: AppColors.iconBackgroundColor,
+                                                     borderRadius: BorderRadius.circular(10),
+                                                   ),
+                                                   child: Column(
+                                                     mainAxisAlignment: MainAxisAlignment.center,
+                                                     children: [
+                                                       Image.asset(
+                                                         "assets/icons/electrician.png",
+                                                         height: 80,
                                                        ),
-                                                     ),
-                                                   ],
-                                                 ),
+                                                       SizedBox(height: 5),
+                                                       Text(
+                                                         'Electrician',
+                                                         textAlign: TextAlign.center,
+                                                         style: TextStyle(
+                                                           fontSize: 15,
+                                                           fontWeight: FontWeight.w700,
+                                                         ),
+                                                       ),
+                                                     ],
+                                                   ),
                                                ),
                                                SizedBox(width: 10),
                                                Container(
-                                                 width: 90,
-                                                 height: 120,
-                                                 decoration: BoxDecoration(
-                                                   color: AppColors.iconBackgroundColor,
-                                                   borderRadius: BorderRadius.circular(10),
-                                                 ),
-                                                 child: Column(
-                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                   children: [
-                                                     Image.asset(
-                                                       "assets/icons/repair.png",
-                                                       height: 80,
-                                                     ),
-                                                     SizedBox(height: 5),
-                                                     Text(
-                                                       'Repair',
-                                                       textAlign: TextAlign.center,
-                                                       style: TextStyle(
-                                                         fontSize: 15,
-                                                         fontWeight: FontWeight.w700,
+                                                   width: 90,
+                                                   height: 120,
+                                                   decoration: BoxDecoration(
+                                                     color: AppColors.iconBackgroundColor,
+                                                     borderRadius: BorderRadius.circular(10),
+                                                   ),
+                                                   child: Column(
+                                                     mainAxisAlignment: MainAxisAlignment.center,
+                                                     children: [
+                                                       Image.asset(
+                                                         "assets/icons/repair.png",
+                                                         height: 80,
                                                        ),
-                                                     ),
-                                                   ],
-                                                 ),
+                                                       SizedBox(height: 5),
+                                                       Text(
+                                                         'Repair',
+                                                         textAlign: TextAlign.center,
+                                                         style: TextStyle(
+                                                           fontSize: 15,
+                                                           fontWeight: FontWeight.w700,
+                                                         ),
+                                                       ),
+                                                     ],
+                                                   ),
                                                ),
                                                SizedBox(width: 10),
                                                Container(
-                                                 width: 90,
-                                                 height: 120,
-                                                 decoration: BoxDecoration(
-                                                   color: AppColors.iconBackgroundColor,
-                                                   borderRadius: BorderRadius.circular(10),
-                                                 ),
-                                                 child: Column(
-                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                   children: [
-                                                     Image.asset(
-                                                       "assets/icons/cleaning.png",
-                                                       height: 80,
-                                                     ),
-                                                     SizedBox(height: 5),
-                                                     Text(
-                                                       'Cleaning',
-                                                       textAlign: TextAlign.center,
-                                                       style: TextStyle(
-                                                         fontSize: 15,
-                                                         fontWeight: FontWeight.w700,
+                                                   width: 90,
+                                                   height: 120,
+                                                   decoration: BoxDecoration(
+                                                     color: AppColors.iconBackgroundColor,
+                                                     borderRadius: BorderRadius.circular(10),
+                                                   ),
+                                                   child: Column(
+                                                     mainAxisAlignment: MainAxisAlignment.center,
+                                                     children: [
+                                                       Image.asset(
+                                                         "assets/icons/cleaning.png",
+                                                         height: 80,
                                                        ),
-                                                     ),
-                                                   ],
-                                                 ),
+                                                       SizedBox(height: 5),
+                                                       Text(
+                                                         'Cleaning',
+                                                         textAlign: TextAlign.center,
+                                                         style: TextStyle(
+                                                           fontSize: 15,
+                                                           fontWeight: FontWeight.w700,
+                                                         ),
+                                                       ),
+                                                     ],
+                                                   ),
                                                ),
 
                                              ]
                                              ),
+                                                 ),
                                SizedBox(height: 5,),
                                Row(
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,

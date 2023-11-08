@@ -42,34 +42,36 @@ class LoginPage extends GetView<Customer_Login_Controller> {
           // focNode: controller.state.loginEmailFocus,
 
     SizedBox(height: 10,),
-           PasswordInputTextForm(
-            obsecure:true,
-            textInputAction: TextInputAction.done,
-            keyboardType: TextInputType.text,
-            contr: controller.state.loginPasswordController,
-            focNode: controller.state.loginPasswordFocus,
-            decoration: InputDecoration(
-             hintText: 'Enter password',
-          hintStyle:TextStyle(fontSize: 25,color:Colors.grey),
-          prefixIcon: Icon(Icons.lock_open_outlined,size: 30,
-           color: AppColors.primaryColor,),
-              suffixIcon:Obx(() =>GestureDetector(
-                    onTap: () {
-                      controller.togglePasswordVisibility();
-                    },
-                    child: Icon(
-                      controller.obsecure.value ? Icons.visibility : Icons.visibility_off,size: 30,),
-                  ),
-                  ),
-             border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  style: BorderStyle.solid,color: Colors.grey.shade600),
-                borderRadius: BorderRadius.all(Radius.circular(25)),
-              ),
-              contentPadding: EdgeInsets.symmetric(vertical: 28), // Increase this value
-            ),
+           Obx((){
+             return PasswordInputTextForm(
+               obsecure:controller.obsecure.value,
+               textInputAction: TextInputAction.done,
+               keyboardType: TextInputType.text,
+               contr: controller.state.loginPasswordController,
+               focNode: controller.state.loginPasswordFocus,
+               decoration: InputDecoration(
+                 hintText: 'Enter password',
+                 hintStyle:TextStyle(fontSize: 25,color:Colors.grey),
+                 prefixIcon: Icon(Icons.lock_open_outlined,size: 30,
+                   color: AppColors.primaryColor,),
+                 suffixIcon:Obx(() =>GestureDetector(
+                   onTap: () {
+                     controller.togglePasswordVisibility();
+                   },
+                   child: Icon(
+                     controller.obsecure.value ? Icons.visibility : Icons.visibility_off,size: 30,),
+                 ),
+                 ),
+                 border: OutlineInputBorder(
+                   borderSide: BorderSide(
+                       style: BorderStyle.solid,color: Colors.grey.shade600),
+                   borderRadius: BorderRadius.all(Radius.circular(25)),
+                 ),
+                 contentPadding: EdgeInsets.symmetric(vertical: 28), // Increase this value
+               ),
 
-          ),
+             );
+           }),
 
 
 

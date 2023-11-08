@@ -42,11 +42,6 @@ class WelcomeView extends GetView<WelcomeController>{
             Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
          children: [
-             // SignUpButton(
-             //     onCustomerPressed: () =>Get.toNamed(AppRoutes.Service_P_UpScreen),
-             //     onServiceProviderPressed: () => Get.toNamed(AppRoutes.Customer_Sign_UpScreen),
-             // ),
-
                Container(
                  padding: EdgeInsets.all(11.0),
                  decoration: BoxDecoration(
@@ -76,7 +71,7 @@ class WelcomeView extends GetView<WelcomeController>{
              ),
              child:TextButton(
                  onPressed: () {
-                   Get.offAllNamed(AppRoutes.Service_P_UpScreen);
+                   Get.toNamed(AppRoutes.Service_P_UpScreen);
                  },
                  child: Center(
                    child: Text('Service Provider ', style:Theme.of(context).textTheme.headlineMedium!

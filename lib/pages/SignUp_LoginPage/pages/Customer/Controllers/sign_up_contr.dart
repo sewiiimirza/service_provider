@@ -18,9 +18,13 @@ class Customer_Signup_Controller extends GetxController {
   final ref = FirebaseFirestore.instance.collection('customers');
   final auth = FirebaseAuth.instance;
 
+  void setLoading(bool val){
+    state.loading.value = val;
+  }
 
   Future<void> registerUser(String email, String password,
       UserModel user) async {
+    setLoading(true);
     String id = DateTime
         .now()
         .microsecondsSinceEpoch
@@ -30,13 +34,16 @@ class Customer_Signup_Controller extends GetxController {
           email: email, password: password)
           .then((value) {
         ref.doc(id).set(user.toJson()).then((value) {
+          setLoading(false);
           Snackbar.showSnackBar("Successful", 'Account Created');
           Get.offAllNamed(AppRoutes.HomeScreen);
         }).onError((error, stackTrace) {
+          setLoading(false);
           Snackbar.showSnackBar("Error", error.toString());
         });
       })
           .onError((error, stackTrace) {
+        setLoading(false);
         Snackbar.showSnackBar("Error", error.toString());
       });
     } catch (e) {
