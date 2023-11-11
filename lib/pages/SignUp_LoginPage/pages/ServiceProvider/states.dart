@@ -5,6 +5,7 @@ class SignupLoginState{
   // controllers for login
   final loginEmailController = TextEditingController();
   final loginPasswordController = TextEditingController();
+  Rx<bool> loginLoading=false.obs;
 
   // controllers for signUp
   final signUpNameController = TextEditingController();
@@ -13,6 +14,7 @@ class SignupLoginState{
   final signUpPhoneController = TextEditingController();
 
   final signUpUserController = TextEditingController();
+  Rx<bool> loading=false.obs;
 
   // focus nodes for login
   final loginEmailFocus = FocusNode();

@@ -9,10 +9,31 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:get/get.dart';
 
+import '../../../../../res/models/prov_model.dart';
+
 class Provider_Signup_Controller extends GetxController {
   Provider_Signup_Controller();
 
+
+  static Provider_Signup_Controller get instance=>Get.find();
   final state = SignupLoginState(); //not change over time
+  final ref= FirebaseFirestore.instance.collection('providers');
+  final auth=FirebaseAuth.instance;
+
+  void setLoading(bool val){
+    state.loading.value=val;
+
+    Future <void> registerProvider (String email,String password,
+        ProviderModel provider)async {
+
+
+
+    }
+
+
+
+  }
+
 
   var obsecure = true.obs;
   void togglePasswordVisibility() {

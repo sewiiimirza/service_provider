@@ -81,7 +81,7 @@ class CustomerSignupView extends GetView<Customer_Signup_Controller>{
                                             String password = controller.state.signUpPasswordController.text.trim().toString();
                                             controller.registerUser(email, password,user);//trim remove the spaces
                                           }else{
-                                            Snackbar.showSnackBar("Error", "Enter All Fiedls");
+                                            Snackbar.showSnackBar("Error", "Enter All Fields");
                                           }
 
                                         }),),
