@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'package:grocery_app/components/colors/light_app_colors.dart';
 
 class Snackbar {
   static void showSnackBar (String title, String msg){

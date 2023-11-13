@@ -6,6 +6,7 @@ import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../res/colors/color.dart';
+import '../../../../../res/component/snack_bar.dart';
 import '../Controllers/login_contr.dart';
 
 class Service_ProviderLoginView extends GetView<Provider_Login_Controller> {
@@ -51,17 +52,32 @@ class Service_ProviderLoginView extends GetView<Provider_Login_Controller> {
                         SizedBox(
                           height: 20,
                         ),
-                        Container(
-                          padding: EdgeInsets.all(5),
-                          height: 70,
-                          width: double.infinity,
-                          child: RoundButton(
-                              title: 'Login',
-                              textColor: Colors.white,
-                              onPress: () {
-                                Get.toNamed(AppRoutes.HomeScreen);
-                              }),
-                        ),
+                       Obx(() {
+                         return Container(
+                           padding: EdgeInsets.all(5),
+                           height: 70,
+                           width: double.infinity,
+                           child: controller.state.loginLoading.value == true
+                               ? Center(child: CircularProgressIndicator())
+                               :
+                           RoundButton(
+                               title: 'Login',
+                               textColor: Colors.white,
+                               onPress: () {
+                                 String email = controller.state
+                                     .loginEmailController.text.trim.toString();
+                                 String password = controller.state
+                                     .loginPasswordController.text.trim
+                                     .toString();
+                                 if (email.isNotEmpty & password.isNotEmpty) {
+                                   controller.login(email, password);
+                                 } else {
+                                   Snackbar.showSnackBar(
+                                       "Error", "Enter all fields");
+                                 }
+                               }),
+                         );
+                       }),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

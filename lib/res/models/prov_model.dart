@@ -7,7 +7,7 @@ class ProviderModel{
   final String phone;
   final String email;
   ProviderModel({
-    this.id,
+    this.id='',
     required this.providerName,
     required this.phone,
     required this.email,
