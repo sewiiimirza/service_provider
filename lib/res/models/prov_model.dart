@@ -15,7 +15,7 @@ class ProviderModel{
     toJson(){
       return{
   'id':id,
-  'name':providerName,
+  'providerName':providerName,
   'phone':phone,
   'email':email,
   };

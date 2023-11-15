@@ -8,7 +8,6 @@ import 'package:e_services/res/models/user_model.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import '../../../../../res/colors/color.dart';
 import '../../../../../res/component/sign_up_image.png.dart';
 

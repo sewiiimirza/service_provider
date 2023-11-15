@@ -65,11 +65,11 @@ class Service_ProviderLoginView extends GetView<Provider_Login_Controller> {
                                textColor: Colors.white,
                                onPress: () {
                                  String email = controller.state
-                                     .loginEmailController.text.trim.toString();
+                                     .loginEmailController.text.trim().toString();
                                  String password = controller.state
-                                     .loginPasswordController.text.trim
+                                     .loginPasswordController.text.trim()
                                      .toString();
-                                 if (email.isNotEmpty & password.isNotEmpty) {
+                                 if (email.isNotEmpty && password.isNotEmpty){
                                    controller.login(email, password);
                                  } else {
                                    Snackbar.showSnackBar(

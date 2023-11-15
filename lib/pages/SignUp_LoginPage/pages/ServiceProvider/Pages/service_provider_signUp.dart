@@ -56,9 +56,12 @@ class ServiceProviderSignUp extends GetView<Provider_Signup_Controller> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SignUp(),
-                          controller.state.loading.value == true ? Container(
-                              child: Center(child: CircularProgressIndicator())) :
-                          Container(
+                          controller.state.loading.value == true
+                              ? Container(
+                              child: Center(
+                                  child: CircularProgressIndicator(),
+                              ),)
+                              : Container(
                             padding: EdgeInsets.all(5),
                             height: 70,
                             width: double.infinity,
