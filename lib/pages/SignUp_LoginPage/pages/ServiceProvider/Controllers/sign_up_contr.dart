@@ -2,6 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/cus_auth_repository.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/states.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/states.dart';
 import 'package:e_services/res/component/snack_bar.dart';
 import 'package:e_services/utils/routes/route_name.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -15,7 +16,8 @@ class Provider_Signup_Controller extends GetxController {
 
 
   static Provider_Signup_Controller get instance=>Get.find();
-  final state = SignupLoginState(); //not change over time
+  // final state = SignupLoginState(); //not change over time
+  final state = SignupLoginStateProvider();
   final ref= FirebaseFirestore.instance.collection('providers');
   final auth=FirebaseAuth.instance;
 

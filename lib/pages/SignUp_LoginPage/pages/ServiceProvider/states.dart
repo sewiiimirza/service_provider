@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class SignupLoginState{
+class SignupLoginStateProvider{
   // controllers for login
   final loginEmailController = TextEditingController();
   final loginPasswordController = TextEditingController();
   Rx<bool> loginLoading=false.obs;
+  Rx<String> serviceOffering = 'Select'.obs;
 
   // controllers for signUp
   final signUpNameController = TextEditingController();
@@ -13,8 +14,10 @@ class SignupLoginState{
   final signUpPasswordController = TextEditingController();
   final signUpPhoneController = TextEditingController();
 
+
   final signUpUserController = TextEditingController();
   Rx<bool> loading=false.obs;
+
 
   // focus nodes for login
   final loginEmailFocus = FocusNode();
@@ -25,6 +28,9 @@ class SignupLoginState{
   final signUpEmailFocus = FocusNode();
   final signUpPasswordFocus = FocusNode();
   final signUpUserFocus = FocusNode();
+
+
+
 
   }
 
