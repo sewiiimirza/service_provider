@@ -107,9 +107,14 @@ class BookingDetail extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              CircleAvatar(
+              GestureDetector(
+                onTap:(){
+                  Get.toNamed(AppRoutes.P_ProfileView);
+                },
+                child: CircleAvatar(
                 backgroundImage: AssetImage(serviceProviderImage),
                 radius: 30,
+              ),
               ),
             ],
           ),

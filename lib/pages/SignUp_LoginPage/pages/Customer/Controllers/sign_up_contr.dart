@@ -36,7 +36,7 @@ class Customer_Signup_Controller extends GetxController {
         ref.doc(id).set(user.toJson()).then((value) {
           setLoading(false);
           Snackbar.showSnackBar("Successful", 'Account Created');
-          Get.offAllNamed(AppRoutes.HomeScreen);
+          Get.offAllNamed(AppRoutes.NavigationMenu);
         }).onError((error, stackTrace) {
           setLoading(false);
           Snackbar.showSnackBar("Error", error.toString());

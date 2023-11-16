@@ -2,7 +2,7 @@
 import 'package:e_services/pages/BookingScreen/booking.dart';
 import 'package:e_services/pages/CategoryScreen/category.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
-import 'package:e_services/pages/ProfileScreen/view.dart';
+import 'package:e_services/pages/ProfileScreen/Customer_Profile/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../pages/ScheduleScreen/view.dart';

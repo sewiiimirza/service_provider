@@ -1,9 +1,11 @@
+import 'package:e_services/pages/ProfileScreen/Customer_Profile/update_screen.dart';
 import 'package:e_services/res/component/round_button.dart';
+import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
-import '../../pages/ProfileScreen/controller.dart';
+
+import '../../pages/ProfileScreen/Customer_Profile/controller.dart';
 import '../../res/colors/color.dart';
 
 class UpdateProfile extends StatelessWidget {
@@ -53,6 +55,10 @@ class UpdateProfile extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   right: 0,
+                    // child:GestureDetector(
+                    //   onTap: () {
+                    //     ImageSelectionService();
+                    //   },
                   child: Container(
                       height: 30,
                       width: 30,
@@ -64,6 +70,7 @@ class UpdateProfile extends StatelessWidget {
                         Icons.camera_alt,
                       )),
                 ),
+
               ]),
               SizedBox(
                 height: 20,

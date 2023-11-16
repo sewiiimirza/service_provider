@@ -50,7 +50,7 @@ class ServiceProviderSignUp extends GetView<Provider_Signup_Controller> {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SignUp(),
+                      P_SignUp(),
                       controller.state.loading.value == true
                           ? Container(
                               child: Center(

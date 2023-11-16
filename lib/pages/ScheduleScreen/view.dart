@@ -7,7 +7,7 @@ import '../../res/colors/color.dart';
 import '../../utils/routes/route_name.dart';
 import 'controller.dart';
 class ScheduleView extends GetView<ScheduleController> {
-  ScheduleView({super.key});
+  ScheduleView({super.key,});
 
   final controller = Get.put<ScheduleController>(ScheduleController());
 

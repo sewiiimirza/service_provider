@@ -21,10 +21,9 @@ class DrawerScreen extends GetView<DrawerScreenController> {
           //  elevation: 0,
 
         ),
-        body: SafeArea(
-          child:Drawer(),
+        body: Drawer(),
 
-          ),
+
 
 
 

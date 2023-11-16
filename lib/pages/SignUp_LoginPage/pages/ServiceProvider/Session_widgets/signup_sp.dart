@@ -8,8 +8,8 @@ import '../../../../../res/colors/color.dart';
 import '../../Customer/Controllers/forg_controller.dart';
 import '../../Customer/Controllers/forg_controller.dart';
 
-class SignUp extends GetView<Provider_Signup_Controller> {
-  SignUp({Key? key}) : super(key: key);
+class P_SignUp extends GetView<Provider_Signup_Controller> {
+  P_SignUp({Key? key}) : super(key: key);
 
   Widget serviceList() {
     return Obx((){
@@ -17,7 +17,7 @@ class SignUp extends GetView<Provider_Signup_Controller> {
         padding:  EdgeInsets.symmetric(horizontal: 5),
         child: DropdownButton(
             iconEnabledColor: Colors.blue,
-            hint: Text(controller.state.serviceOffering.value,style: TextStyle(fontSize: 20),),
+            hint: Text(controller.state.serviceOffering.value,style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,),),
             items: [
           DropdownMenuItem(
             child: Text('Carpenter'),
@@ -223,7 +223,9 @@ class SignUp extends GetView<Provider_Signup_Controller> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Offering Service',style: TextStyle(fontSize: 20),),
+             Text('Offering Service',style: TextStyle(fontSize: 20,color: Colors.blueAccent,
+                 fontWeight: FontWeight.bold
+             ),),
             serviceList(),
           ],
         ),

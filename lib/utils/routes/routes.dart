@@ -6,8 +6,8 @@ import 'package:e_services/pages/BookingScreen/successful.dart';
 import 'package:e_services/pages/CategoryScreen/category.dart';
 import 'package:e_services/pages/FeaturedScreen/featured.dart';
 import 'package:e_services/pages/HomeScreen/index.dart';
-import 'package:e_services/pages/ProfileScreen/update_screen.dart';
-import 'package:e_services/pages/ProfileScreen/view.dart';
+import 'package:e_services/pages/ProfileScreen/Customer_Profile/update_screen.dart';
+import 'package:e_services/pages/ProfileScreen/Customer_Profile/view.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/bindings.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Pages/cus_forget.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Pages/customer_loginview.dart';
@@ -28,6 +28,8 @@ import '../../pages/HomeScreen/drawer_screen.dart';
 import '../../pages/Onboarding/bindings.dart';
 import '../../pages/Onboarding/view.dart';
 
+import '../../pages/ProfileScreen/Provider_Profile/P_update_screen.dart';
+import '../../pages/ProfileScreen/Provider_Profile/view.dart';
 import '../../pages/ScheduleScreen/view.dart';
 import '../../pages/SignUp_LoginPage/pages/ServiceProvider/bindings.dart';
 import '../../pages/SignUp_LoginPage/pages/ServiceProvider/Pages/service_provider_signUp.dart';
@@ -133,6 +135,14 @@ class AppPages {
     GetPage(name: AppRoutes.ProfileView,
       page: () => ProfileView(),
      // binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.P_ProfileView,
+      page: () => P_Profile_View(),
+      // binding:HomeBinding(),
+    ),
+    GetPage(name: AppRoutes.P_UpdateProfileScreen,
+      page: () => P_UpdateProfileScreen(),
+      // binding:HomeBinding(),
     ),
     GetPage(name: AppRoutes.UpdateProfileScreen,
       page: () => UpdateProfileScreen(),

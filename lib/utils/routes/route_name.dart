@@ -21,6 +21,8 @@ class AppRoutes {
   static const String SuccessfulView= '/successful';
   static const String ProfileView= '/profile';
   static const String UpdateProfileScreen= '/update_profile';
+  static const String P_ProfileView= '/pro_profile';
+  static const String P_UpdateProfileScreen= '/pro_update_profile';
   static const String DrawerScreen= '/drawer';
 
 

@@ -9,8 +9,8 @@ import 'package:get/get.dart';
 import '../../../../../res/colors/color.dart';
 
 
-class LoginPage extends GetView<Provider_Login_Controller> {
-  LoginPage({Key? key}) : super(key: key);
+class P_LoginPage extends GetView<Provider_Login_Controller> {
+  P_LoginPage({Key? key}) : super(key: key);
 
   final controller = Get.put<Provider_Login_Controller>(Provider_Login_Controller());
 
@@ -58,8 +58,10 @@ class LoginPage extends GetView<Provider_Login_Controller> {
               onTap: () {
                 controller.togglePasswordVisibility();
               },
-              child: Icon(
-                controller.obsecure.value ? Icons.visibility : Icons.visibility_off,size: 30,),
+              child:
+              Icon(controller.obsecure.value
+                  ? Icons.visibility :
+              Icons.visibility_off,size: 30,),
             ),
             ),
             border: OutlineInputBorder(

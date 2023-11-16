@@ -2,7 +2,7 @@ import 'package:e_services/utils/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../res/colors/color.dart';
+import '../../../res/colors/color.dart';
 import 'controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -49,6 +49,10 @@ class ProfileView extends GetView<ProfileController> {
                   Positioned(
                     bottom: 0,
                     right: 0,
+                     child:GestureDetector(
+                       onTap: () {
+                         Get.toNamed(AppRoutes.UpdateProfileScreen);
+                       },
                     child: Container(
                         height: 30,
                         width: 30,
@@ -56,23 +60,24 @@ class ProfileView extends GetView<ProfileController> {
                           borderRadius: BorderRadius.circular(100),
                           color: Colors.blueAccent,
                         ),
-                        child: Icon(
-                          Icons.edit,
-                        )),
-                  ),
-                ],),
+                          child: Icon(
+                            Icons.edit,),
+                          ),
+                     ),
+                    ),]),
               SizedBox(height: 40,),
-              GestureDetector(
-                onTap: () {
-                  Get.toNamed(AppRoutes.UpdateProfileScreen);
-                },
-                child: Text(
-                  ' John Doe',
+              // GestureDetector(
+              //   onTap: () {
+              //     Get.toNamed(AppRoutes.UpdateProfileScreen);
+               // },
+
+                   Text(
+                  ' Edward',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-              ),
+
               Text(
-                'superAdmin@E_Services.com',
+                'Customer@E_Services.com',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
               SizedBox(
@@ -80,7 +85,6 @@ class ProfileView extends GetView<ProfileController> {
               ),
 
 
-              //
               ListTile(
                 leading: Icon(
                   Icons.wallet,
@@ -205,10 +209,14 @@ class ProfileView extends GetView<ProfileController> {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-            ],
-          ),
-        ),
+
+
+        ]
       ),
-    );
+
+    ),
+      ),
+      );
+
   }
 }

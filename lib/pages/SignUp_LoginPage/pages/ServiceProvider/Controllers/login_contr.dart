@@ -23,7 +23,7 @@ class Provider_Login_Controller extends GetxController {
     setLoginLoading(true);
     try{
       await auth.signInWithEmailAndPassword(email: email, password: password).then((value){
-        Get.toNamed(AppRoutes.HomeScreen);
+        Get.toNamed(AppRoutes.P_ProfileView);
         setLoginLoading(false);
       }).onError((error, stackTrace){
         setLoginLoading(false);

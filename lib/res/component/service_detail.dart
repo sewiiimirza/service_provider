@@ -93,9 +93,14 @@ class ServiceContainer extends StatelessWidget {
                SizedBox(height: 10),
                 Row(
                   children: [
-                    CircleAvatar(
+                    GestureDetector(
+                      onTap:(){
+                        Get.toNamed(AppRoutes.P_ProfileView);
+                      },
+                   child: CircleAvatar(
                       backgroundImage: AssetImage(serviceProviderImage),
                       radius: 20,
+                    ),
                     ),
                     SizedBox(width: 10),
                     Text(serviceProviderName),

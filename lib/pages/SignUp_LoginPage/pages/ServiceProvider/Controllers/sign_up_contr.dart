@@ -37,7 +37,7 @@ class Provider_Signup_Controller extends GetxController {
           ref.doc(id).set(provider.toJson()).then((value) {
             setLoading(false);
             Snackbar.showSnackBar("Successful", 'Account Created');
-            Get.offAllNamed(AppRoutes.HomeScreen);
+            Get.offAllNamed(AppRoutes.P_ProfileView);
           }).onError((error, stackTrace) {
             setLoading(false);
             Snackbar.showSnackBar('Error', error.toString());

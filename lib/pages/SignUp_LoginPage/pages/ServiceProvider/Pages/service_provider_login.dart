@@ -1,5 +1,6 @@
 import 'package:e_services/pages/SignUp_LoginPage/pages/Customer/Session_widgets/login_page.dart';
 import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/Controllers/sign_up_contr.dart';
+import 'package:e_services/pages/SignUp_LoginPage/pages/ServiceProvider/Session_widgets/login_sp.dart';
 import 'package:e_services/res/component/login_image.dart';
 import 'package:e_services/res/component/round_button.dart';
 import 'package:e_services/utils/routes/route_name.dart';
@@ -37,7 +38,7 @@ class Service_ProviderLoginView extends GetView<Provider_Login_Controller> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        LoginPage(),
+                        P_LoginPage(),
                         SizedBox(height: 5,),
                         Align(
                           alignment:Alignment.centerRight,

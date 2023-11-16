@@ -5,20 +5,20 @@ class NavigationDrawer extends StatelessWidget {
   @override
     Widget build(BuildContext context){
       return Drawer(
-      child:Container(
-        height: 500,
-         width: 70,
-         color: Colors.blue,
-         child: ListView(
-              children:[
-            UserAccountsDrawerHeader(
-             decoration: BoxDecoration(color:Colors.blueAccent),
-             accountName: Text('John Doe'),
-             accountEmail: Text('johndoe@example.com'),
-             currentAccountPicture: CircleAvatar(
-               backgroundImage: AssetImage('assets/images/service_provider1.png'),
-             ),
-          ),
+        child: Container(
+          height: 500,
+           width: 70,
+           color: Colors.blue,
+             child: ListView(
+                  children:[
+                UserAccountsDrawerHeader(
+                 decoration: BoxDecoration(color:Colors.blueAccent),
+                 accountName: Text('John Doe'),
+                 accountEmail: Text('johndoe@example.com'),
+                 currentAccountPicture: CircleAvatar(
+                   backgroundImage: AssetImage('assets/images/service_provider1.png'),
+                 ),
+              ),
 
           ListTile(
             leading: Icon(Icons.home, color: Colors.indigoAccent,),
@@ -45,7 +45,6 @@ class NavigationDrawer extends StatelessWidget {
     ),
 
   ));
-
 
   }
 }

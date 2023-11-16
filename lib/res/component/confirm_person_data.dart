@@ -102,6 +102,28 @@ class PersonData extends StatelessWidget {
                               vertical: 30),
                         ),
                       ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          prefixIcon: Icon(
+                            Icons.timelapse_outlined,
+                            size: 30,
+                            color: AppColors.primaryColor,
+                          ),
+                          labelText: 'Time',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                style: BorderStyle.solid,
+                                color: Colors.grey.shade600),
+                            borderRadius: BorderRadius.all(Radius.circular(50)),
+                          ),
+                          contentPadding:
+                          EdgeInsets.symmetric(
+                              vertical: 30),
+                        ),
+                      ),
                       // RoundButton(
                       //   title: "Save",
                       //   onPress: () => {},
