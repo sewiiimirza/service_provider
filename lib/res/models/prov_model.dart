@@ -21,8 +21,8 @@ class ProviderModel{
   };
     }
     factory ProviderModel.fromJson(
-      DocumentSnapshot<Map<String , dynamic>>snapshot,
-        ) {
+      DocumentSnapshot<Map<String , dynamic>> snapshot,
+        ){
 final json= snapshot.data()!;
   return ProviderModel(
         id:json["id"],
