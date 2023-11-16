@@ -34,19 +34,6 @@ class AppColors {
   static const Color alertColor =  Color(0xffff0222);
   static const Color whiteColor =  Color(0xffffffff);
 
-  static const Color focusUnderLineColor =  Color(0xff373737);
-  static const Color dividedColor =  Color(0xff373737);
-  static const Color grayColor =  Color(0xffdfdfe1);
-
-  static const Color dialogAlertBackgroundColor =  Color(0xff262938);
-  static const Color lightGrayColor =  Color(0xffA5A5A5);
-
-
-  //otp screen changing color
-  static const Color otpBorderColor =  Color.fromRGBO(34, 34, 34, 0.1);
-  static const Color otpFocusColor =  Color.fromRGBO(0, 150, 255,1);
-  static const Color otpBackgroundColor =  Color(0xffff5f5f6);
-  static const Color otpHintColor =  Color.fromRGBO(170, 170, 170,1);
 
 
 }
