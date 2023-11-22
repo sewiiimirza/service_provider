@@ -71,6 +71,7 @@ class P_SignUp extends GetView<Provider_Signup_Controller> {
   @override
   Widget build(BuildContext context) {
     final x = 0;
+    final x = 0;
     final controller =
         Get.put<Provider_Signup_Controller>(Provider_Signup_Controller());
     // final _formKey =GlobalKey<FormState>();
